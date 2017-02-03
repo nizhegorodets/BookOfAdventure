@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    interface IState
+    class Choice
     {
     }
 }
