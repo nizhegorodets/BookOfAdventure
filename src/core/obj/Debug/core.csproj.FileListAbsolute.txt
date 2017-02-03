@@ -1,1 +1,2 @@
 D:\work\BookOfAdventure\src\core\bin\Debug\core.exe.config
+D:\work\test\BookOfAdventure\src\core\bin\Debug\core.exe.config
