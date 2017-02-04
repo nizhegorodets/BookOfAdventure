@@ -48,6 +48,7 @@
     <Compile Include="ILocation.cs" />
     <Compile Include="INPC.cs" />
     <Compile Include="IPhrase.cs" />
+    <Compile Include="IState.cs" />
     <Compile Include="Phrase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
