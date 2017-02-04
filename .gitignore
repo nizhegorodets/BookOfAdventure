@@ -1,3 +1,4 @@
 src/core/bin/**/*.*
 src/core/obj/**/*.*
 src/core/obj/Debug/core.csproj.FileListAbsolute.txt
+src/core/.vs/**/*.*
