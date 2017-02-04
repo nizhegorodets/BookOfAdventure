@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Choice.cs" />
     <Compile Include="gameContext.cs" />
     <Compile Include="ILocation.cs" />
     <Compile Include="INPC.cs" />
+    <Compile Include="IPhrase.cs" />
+    <Compile Include="Phrase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="thread.cs" />
