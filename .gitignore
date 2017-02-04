@@ -1,2 +1,2 @@
-src/core/bin/
-src/core/obj/
+src/core/bin/**/*.*
+src/core/obj/**/*.*
