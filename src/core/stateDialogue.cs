@@ -20,8 +20,9 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    class Phrase : IPhrase
+    class stateDialogue
     {
-        public void sayPhrase() { }
+        public void Init() { }
+        public void startExecution() { }
     }
 }
