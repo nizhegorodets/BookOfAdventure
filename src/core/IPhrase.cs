@@ -22,5 +22,6 @@ namespace core
 {
     interface IPhrase
     {
+        void sayPhrase();
     }
 }
