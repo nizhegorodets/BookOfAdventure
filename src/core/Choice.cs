@@ -22,5 +22,8 @@ namespace core
 {
     class Choice
     {
+        private uint mID;
+        private string mText;
+        private IState mState;
     }
 }
