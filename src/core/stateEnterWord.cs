@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    class stateDialogue : AState
+    class stateEnterWord : AState
     {
         public override void Init() { }
         public override void startExecution() { }
