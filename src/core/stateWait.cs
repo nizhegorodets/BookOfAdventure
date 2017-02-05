@@ -20,10 +20,9 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    class Choice
+    class stateWait : AState
     {
-        private uint mID;
-        private string mText;
-        private IState mState;
+        public override void Init() { }
+        public override void startExecution() { }
     }
 }

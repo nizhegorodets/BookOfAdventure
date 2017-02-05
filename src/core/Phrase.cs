@@ -20,7 +20,8 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    class Phrase
+    class Phrase : IPhrase
     {
+        public void sayPhrase() { }
     }
 }
