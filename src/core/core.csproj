@@ -53,6 +53,7 @@
     <Compile Include="Phrase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="stateChoice.cs" />
     <Compile Include="stateDialogue.cs" />
     <Compile Include="stateEnterWord.cs" />
     <Compile Include="thread.cs" />
