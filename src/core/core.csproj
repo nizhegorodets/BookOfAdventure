@@ -56,6 +56,7 @@
     <Compile Include="stateChoice.cs" />
     <Compile Include="stateDialogue.cs" />
     <Compile Include="stateEnterWord.cs" />
+    <Compile Include="stateWait.cs" />
     <Compile Include="thread.cs" />
   </ItemGroup>
   <ItemGroup>
