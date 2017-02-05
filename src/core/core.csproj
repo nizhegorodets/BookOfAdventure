@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AState.cs" />
     <Compile Include="Choice.cs" />
     <Compile Include="gameContext.cs" />
     <Compile Include="ILocation.cs" />
