@@ -18,9 +18,77 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace core
 {
     class gameContext
     {
+        // information about player
+        private ILocation currLocation;
+        private string playerName;
+
+        // information about objects of game
+        private List<ILocation> locations;
+        private List<INPC> NPCs;
+        private List<thread> threads;
+        private List<thread> activeThreads;
+        private SortedDictionary<int, string> enteredWords;
+
+        // methods
+        public void init()
+        {
+            threads = new List<thread>();
+            activeThreads = new List<thread>();
+        }
+
+        public void deleteActiveThreads(thread input)
+        {
+            // delete only activeThreads
+            foreach (thread th in activeThreads)
+            {
+                if (th == input)
+                {
+                    activeThreads.Remove(input);
+                }
+            }
+            throw new coreErrors((int)coreErrors.errorCodes.ELEMENT_DOES_NOT_EXIST_IN_ACTIVE_THREADS);
+        }
+        public void deleteThreads(ref thread input)
+        {
+            // delete from activeThreads, threads and destroy input object
+            deleteActiveThreads(input);
+
+            foreach (thread th in threads)
+            {
+                if (th == input)
+                {
+                    threads.Remove(input);
+                    input = null;
+                } 
+            }
+            throw new coreErrors((int)coreErrors.errorCodes.ELEMENT_DOES_NOT_EXIST_IN_THREADS);
+        }
+        public void addThreads(thread input)
+        {
+            threads.Add(input);
+        }
+        public void addLocation(ILocation input)
+        {
+            locations.Add(input);
+        }
+        public void addNPC(INPC input)
+        {
+            NPCs.Add(input);
+        }
+        public void setCurrLocation(ILocation input)
+        {
+            currLocation = input;
+        }
+        public void setPlayerName(string input)
+        {
+            playerName = input;
+        }
+
     }
 }
