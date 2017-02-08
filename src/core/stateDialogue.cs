@@ -22,7 +22,28 @@ namespace core
 {
     class stateDialogue : AState
     {
+        private Phrase[] mPhrases;
+        private uint mCurrentPhrase;
+
+        public stateDialogue(uint id, string description, IState[] nextStates, Phrase[] phrases)
+        {
+            this.mID = id;
+            this.mDescription = description;
+            this.mNextStates = nextStates;
+            this.mPhrases = phrases;
+            this.mCurrentPhrase = 0;
+        }
         public override void Init() { }
-        public override IState startExecution() { }
+
+        public override IState startExecution(gameContext game)
+        {
+            foreach (var i in this.mPhrases)
+            {
+                i.sayPhrase();
+                this.mCurrentPhrase++;
+            }
+                
+            return mNextStates[0];
+        }
     }
 }

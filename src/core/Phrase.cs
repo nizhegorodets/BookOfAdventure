@@ -22,6 +22,18 @@ namespace core
 {
     class Phrase : IPhrase
     {
-        public void sayPhrase() { }
+        private uint mPhraseOrigin;
+        private string mPhrase;
+
+        public Phrase(uint phraseOrigin, string phrase)
+        {
+            this.mPhraseOrigin = phraseOrigin;
+            this.mPhrase = phrase;
+        }
+
+        public void sayPhrase()
+        {
+            Console.WriteLine(this.mPhraseOrigin + ':' + '"' + this.mPhrase + '"');
+        }
     }
 }
