@@ -22,5 +22,11 @@ namespace core
 {
     class thread
     {
+        private uint mID;
+
+        public void setID(uint input)
+        {
+            mID = input;
+        }
     }
 }

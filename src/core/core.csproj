@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AState.cs" />
     <Compile Include="Choice.cs" />
+    <Compile Include="coreErrors.cs" />
     <Compile Include="gameContext.cs" />
     <Compile Include="ILocation.cs" />
     <Compile Include="INPC.cs" />
