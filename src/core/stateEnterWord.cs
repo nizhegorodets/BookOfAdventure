@@ -23,6 +23,6 @@ namespace core
     class stateEnterWord : AState
     {
         public override void Init() { }
-        public override void startExecution() { }
+        public override IState startExecution() { }
     }
 }

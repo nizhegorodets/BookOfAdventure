@@ -22,7 +22,10 @@ namespace core
 {
     abstract class AState : IState
     {
+        protected uint mID;
+        protected string mDescription;
+        protected IState[] mNextStates;
         public abstract void Init();
-        public abstract void startExecution();
+        public abstract IState startExecution(gameContext game);
     }
 }
