@@ -24,18 +24,11 @@ namespace core
     {
         private uint mID;
         private string mText;
-        private IState mNextState;
 
-        public Choice(uint mID, string mText, IState mNextState)
+        public Choice(uint mID, string mText)
         {
             this.mID = mID;
             this.mText = mText;
-            this.mNextState = mNextState;
-        }
-
-        public IState getNextState()
-        {
-            return this.mNextState;
         }
     }
 }

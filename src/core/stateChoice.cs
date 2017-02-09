@@ -33,12 +33,12 @@ namespace core
             this.mChoices = mChoices;
         }
         
-        public override void Init() { }
+        public override void Init() { this.mChoosedChoice = 0; }
 
         public override IState startExecution(gameContext game)
         {
             this.mChoosedChoice = uint.Parse(Console.ReadLine());
-            return this.mChoices[this.mChoosedChoice - 1].getNextState();
+            return this.mNextStates[this.mChoosedChoice - 1];
         }
     }
 }
