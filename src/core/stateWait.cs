@@ -22,7 +22,22 @@ namespace core
 {
     class stateWait : AState
     {
+        private uint mDelay;
+
+        public stateWait(uint mID, string mDescription, IState[] mNextStates, uint mDelay)
+        {
+            this.mID = mID;
+            this.mDescription = mDescription;
+            this.mNextStates = mNextStates;
+            this.mDelay = mDelay;
+        }
+
         public override void Init() { }
-        public override void startExecution() { }
+
+        public override IState startExecution(gameContext game)
+        {
+            System.Threading.Thread.Sleep(Convert.ToInt32(mDelay) * 1000);
+            return mNextStates[0];
+        }
     }
 }

@@ -23,6 +23,6 @@ namespace core
     interface IState
     {
         void Init();
-        void startExecution();
+        IState startExecution(gameContext game);
     }
 }

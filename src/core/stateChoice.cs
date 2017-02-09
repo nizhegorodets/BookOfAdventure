@@ -22,7 +22,23 @@ namespace core
 {
     class stateChoice : AState
     {
-        public override void Init() { }
-        public override void startExecution() { }
+        private uint mChoosedChoice;
+        private Choice[] mChoices;
+
+        public stateChoice(uint mID, string mDescription, IState[] mNextStates, Choice[] mChoices)
+        {
+            this.mID = mID;
+            this.mDescription = mDescription;
+            this.mNextStates = mNextStates;
+            this.mChoices = mChoices;
+        }
+        
+        public override void Init() { this.mChoosedChoice = 0; }
+
+        public override IState startExecution(gameContext game)
+        {
+            this.mChoosedChoice = uint.Parse(Console.ReadLine());
+            return this.mNextStates[this.mChoosedChoice - 1];
+        }
     }
 }

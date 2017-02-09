@@ -22,7 +22,22 @@ namespace core
 {
     class stateEnterWord : AState
     {
+        private string mEnteredWord;
+
+        public stateEnterWord(uint id, string description, IState[] nextStates)
+        {
+            this.mID = id;
+            this.mDescription = description;
+            this.mNextStates = nextStates;
+            this.mEnteredWord = "";
+        }
+
         public override void Init() { }
-        public override void startExecution() { }
+
+        public override IState startExecution(gameContext game)
+        {
+            this.mEnteredWord = Console.ReadLine();
+            return mNextStates[0]; 
+        }
     }
 }
