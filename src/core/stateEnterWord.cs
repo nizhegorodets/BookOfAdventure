@@ -30,14 +30,18 @@ namespace core
             this.mDescription = description;
             this.mNextStates = nextStates;
             this.mEnteredWord = "";
+            // The answer does return word
+            this.mAnswer = new enteredWordAnswer("Enter word", mNextStates[0], false, false, mEnteredWord);
+            this.mEndGame = false;
+            this.mEndThread = false;
         }
 
         public override void Init() { }
 
-        public override IState startExecution(gameContext game)
+        public override IAnswer startExecution()
         {
             this.mEnteredWord = Console.ReadLine();
-            return mNextStates[0]; 
+            return mAnswer; 
         }
     }
 }

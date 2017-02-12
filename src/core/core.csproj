@@ -43,10 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AAnswer.cs" />
     <Compile Include="AState.cs" />
     <Compile Include="Choice.cs" />
+    <Compile Include="choiceAnswer.cs" />
     <Compile Include="coreErrors.cs" />
+    <Compile Include="emptyAnswer.cs" />
+    <Compile Include="enteredWordAnswer.cs" />
     <Compile Include="gameContext.cs" />
+    <Compile Include="IAnswer.cs" />
     <Compile Include="ILocation.cs" />
     <Compile Include="INPC.cs" />
     <Compile Include="IPhrase.cs" />

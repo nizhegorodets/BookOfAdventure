@@ -24,21 +24,40 @@ namespace core
     {
         private uint mChoosedChoice;
         private Choice[] mChoices;
+        private string mTitle;
 
-        public stateChoice(uint mID, string mDescription, IState[] mNextStates, Choice[] mChoices)
+        public void setTitle(string input)
+        {
+            mTitle = input;
+        }
+        public stateChoice() { }
+        public stateChoice(uint mID, string mDescription, IState[] mNextStates, Choice[] mChoices, string title)
         {
             this.mID = mID;
             this.mDescription = mDescription;
             this.mNextStates = mNextStates;
             this.mChoices = mChoices;
+            this.mTitle = title;
+            // The answer does return choice
+            this.mAnswer = new choiceAnswer("Choice", mNextStates[0], false, false, 0);
+            this.mEndGame = false;
+            this.mEndThread = false;
         }
         
         public override void Init() { this.mChoosedChoice = 0; }
 
-        public override IState startExecution(gameContext game)
+        public override IAnswer startExecution()
         {
+            Console.WriteLine("    " + mTitle);
+            int count = 0;
+            foreach (Choice ch in mChoices)
+            {
+                count++;
+                Console.WriteLine("        " + Convert.ToString(count) + ". " + ch.getText());
+            }
             this.mChoosedChoice = uint.Parse(Console.ReadLine());
-            return this.mNextStates[this.mChoosedChoice - 1];
+            mAnswer.setNextState(this.mNextStates[this.mChoosedChoice - 1]);
+            return mAnswer;
         }
     }
 }

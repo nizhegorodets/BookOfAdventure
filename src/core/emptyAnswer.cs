@@ -1,4 +1,4 @@
-﻿// core 2017 Anikin Dmitry, Mikhail Kudimov
+﻿// Copyright 2017 Anikin Dmitry, Mikhail Kudimov
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,16 +20,27 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    abstract class AState : IState
+    class emptyAnswer : AAnswer
     {
-        protected uint mID;
-        protected string mDescription;
-        protected IState[] mNextStates;
-        protected IAnswer mAnswer;
-        protected bool mEndThread, mEndGame;
+        public emptyAnswer(string inType, IState inState, bool inEndTh, bool inEndG)
+        {
+            mNextState = inState;
+            mTypeOfState = inType;
+            mEndThread = inEndTh;
+            mEndGame = inEndG;
+        }
+        public override IState getNextState()
+        {
+            return mNextState;
+        }
+        public override void setNextState(IState nextState)
+        {
+            mNextState = nextState;
+        }
+        public override string getData()
+        {
+            return "";
+        }
 
-        public abstract void Init();
-        public abstract IAnswer startExecution();
-        public uint getID() { return mID; }
     }
 }
