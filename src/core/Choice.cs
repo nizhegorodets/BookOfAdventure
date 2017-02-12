@@ -30,5 +30,9 @@ namespace core
             this.mID = mID;
             this.mText = mText;
         }
+        public string getText()
+        {
+            return mText;
+        }
     }
 }

@@ -33,15 +33,36 @@ namespace core
         private List<INPC> NPCs;
         private List<thread> threads;
         private List<thread> activeThreads;
-        private SortedDictionary<int, string> enteredWords;
+       
 
         // methods
+        public void startGame()
+        {
+            foreach (thread th in activeThreads)
+            {
+                List<bool> endFlags = new List<bool>();
+                endFlags  = th.runState();
+                bool endTh = endFlags[0];
+                bool endGame = endFlags[1];
+
+                if(endTh)
+                {
+                    //deleteActiveThreads(th);
+                }
+
+                if (endGame)
+                {
+                    //deleteActiveThreads(th);
+                    break;
+                }
+            }
+            Console.WriteLine("---\nКонец игры");
+        }
         public void init()
         {
             threads = new List<thread>();
             activeThreads = new List<thread>();
         }
-
         public void deleteActiveThreads(thread input)
         {
             // delete only activeThreads
@@ -72,6 +93,10 @@ namespace core
         public void addThreads(thread input)
         {
             threads.Add(input);
+        }
+        public void addActiveThreads(thread input)
+        {
+            activeThreads.Add(input);
         }
         public void addLocation(ILocation input)
         {

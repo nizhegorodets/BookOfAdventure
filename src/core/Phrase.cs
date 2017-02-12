@@ -33,7 +33,7 @@ namespace core
 
         public void sayPhrase()
         {
-            Console.WriteLine(this.mPhraseOrigin + ':' + '"' + this.mPhrase + '"');
+            Console.WriteLine("    " + this.mPhrase);
         }
     }
 }

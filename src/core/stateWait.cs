@@ -23,21 +23,32 @@ namespace core
     class stateWait : AState
     {
         private uint mDelay;
-
-        public stateWait(uint mID, string mDescription, IState[] mNextStates, uint mDelay)
+        private string mTitle;
+        public void setTitle(string title)
+        {
+            mTitle = title;
+        }
+        public stateWait(){ }
+        public stateWait(uint mID, string mDescription, IState[] mNextStates, uint mDelay, string title)
         {
             this.mID = mID;
             this.mDescription = mDescription;
             this.mNextStates = mNextStates;
             this.mDelay = mDelay;
+            this.mTitle = title;
+            // The answer doesn't return nothing
+            this.mAnswer = new emptyAnswer("Wait", mNextStates[0], false, false);
+            this.mEndGame = false;
+            this.mEndThread = false;
         }
 
         public override void Init() { }
 
-        public override IState startExecution(gameContext game)
+        public override IAnswer startExecution()
         {
+            Console.WriteLine(mTitle);
             System.Threading.Thread.Sleep(Convert.ToInt32(mDelay) * 1000);
-            return mNextStates[0];
+            return mAnswer;
         }
     }
 }

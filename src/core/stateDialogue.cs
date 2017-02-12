@@ -25,25 +25,36 @@ namespace core
         private Phrase[] mPhrases;
         private uint mCurrentPhrase;
 
-        public stateDialogue(uint id, string description, IState[] nextStates, Phrase[] phrases)
+        public stateDialogue() { }
+        public stateDialogue(uint id, string description, IState[] nextStates, Phrase[] phrases, bool endTh, bool endGame)
         {
             this.mID = id;
             this.mDescription = description;
             this.mNextStates = nextStates;
             this.mPhrases = phrases;
             this.mCurrentPhrase = 0;
+            this.mEndGame = endGame;
+            this.mEndThread = endTh;
+            // set endState automatically
+            if ((mEndGame == true) || (mEndThread == true))
+            {
+                mNextStates = new IState[1];
+                mNextStates[0] = null;
+            }
+            // The answer doesn't return nothing
+            this.mAnswer = new emptyAnswer("Dialogue", mNextStates[0], mEndThread, mEndGame);
         }
         public override void Init() { }
 
-        public override IState startExecution(gameContext game)
+        public override IAnswer startExecution()
         {
             foreach (var i in this.mPhrases)
             {
                 i.sayPhrase();
                 this.mCurrentPhrase++;
+                System.Threading.Thread.Sleep(2000);
             }
-                
-            return mNextStates[0];
+            return mAnswer;
         }
     }
 }
