@@ -44,7 +44,6 @@ namespace core
             // The answer doesn't return nothing
             this.mAnswer = new emptyAnswer("Dialogue", mNextStates[0], mEndThread, mEndGame);
         }
-        public override void Init() { }
 
         public override IAnswer startExecution()
         {
