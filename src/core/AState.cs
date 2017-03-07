@@ -28,7 +28,6 @@ namespace core
         protected IAnswer mAnswer;
         protected bool mEndThread, mEndGame;
 
-        public abstract void Init();
         public abstract IAnswer startExecution();
         public uint getID() { return mID; }
     }

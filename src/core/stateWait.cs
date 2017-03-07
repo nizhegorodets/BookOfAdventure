@@ -42,8 +42,6 @@ namespace core
             this.mEndThread = false;
         }
 
-        public override void Init() { }
-
         public override IAnswer startExecution()
         {
             Console.WriteLine(mTitle);
