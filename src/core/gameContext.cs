@@ -34,16 +34,18 @@ namespace core
         private List<ILocation> locations;
         private List<INPC> NPCs;
         private List<thread> threads;
-        private List<thread> activeThreads;
+        private List<uint?> activeThreads;
 
 
         // methods
         public void startGame()
         {
-            foreach (thread th in activeThreads)
+            for(int i = 0; i < activeThreads.Count; i++)
             {
                 List<bool> endFlags = new List<bool>();
-                endFlags = th.runState();
+                // TODO: add check activeThreads[i] == null?
+                thread currentTh = threads[Convert.ToInt32(activeThreads[i])];
+                endFlags = currentTh.runState();
                 bool endTh = endFlags[0];
                 bool endGame = endFlags[1];
 
@@ -63,15 +65,16 @@ namespace core
         public void init()
         {
             threads = new List<thread>();
-            activeThreads = new List<thread>();
+            activeThreads = new List<uint?>();
         }
-        public void deleteActiveThreads(thread input)
+        public void deleteActiveThread(uint? input)
         {
             // delete only activeThreads
-            foreach (thread th in activeThreads)
+            for(uint? i = 0; i < activeThreads.Count; i++)
             {
-                if (th == input)
+                if (i == input)
                 {
+                    // TODO: may be change type of activeThreads to "math set"?
                     activeThreads.Remove(input);
                 }
             }
@@ -80,7 +83,7 @@ namespace core
         public void deleteThreads(ref thread input)
         {
             // delete from activeThreads, threads and destroy input object
-            deleteActiveThreads(input);
+            deleteActiveThread(input.getThID());
 
             foreach (thread th in threads)
             {
@@ -98,7 +101,7 @@ namespace core
         }
         public void addActiveThreads(thread input)
         {
-            activeThreads.Add(input);
+            activeThreads.Add(input.getThID());
         }
         public void addLocation(ILocation input)
         {
