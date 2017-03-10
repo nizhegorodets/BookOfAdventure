@@ -22,14 +22,14 @@ namespace core
 {
     class thread
     {
-        private uint mID;
+        private uint? mID;
         private uint? mCurrentState;
         private SortedDictionary<string, string> enteredWords;
         private SortedDictionary<string, uint> enteredChoices;
         private SortedDictionary<uint?, IState> mIDToIState;
 
         // methods
-
+        public uint? getThID() { return mID; }
         IAnswer startExecution(uint? CurrentStateID)
         {
             IAnswer ans;
