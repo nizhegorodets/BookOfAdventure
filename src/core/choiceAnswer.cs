@@ -27,7 +27,7 @@ namespace core
         {
             numberOfChoice = input;
         }
-        public choiceAnswer(string inType, IState inState, bool inEndTh, bool inEndG, uint inNumber)
+        public choiceAnswer(string inType, uint? inState, bool inEndTh, bool inEndG, uint inNumber)
         {
             mNextState = inState;
             mTypeOfState = inType;
@@ -35,12 +35,12 @@ namespace core
             mEndGame = inEndG;
             numberOfChoice = inNumber;
         }
-        public override IState getNextState()
+        public override uint? getNextState()
         {
             return mNextState;
         }
 
-        public override void setNextState(IState nextState)
+        public override void setNextState(uint? nextState)
         {
             mNextState = nextState;
         }

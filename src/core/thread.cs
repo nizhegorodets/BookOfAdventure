@@ -23,29 +23,36 @@ namespace core
     class thread
     {
         private uint mID;
-        private List<IState> mStates;
-        private IState mCurrentState;
-        // key = mID(thread)_mID(AState)
+        private uint? mCurrentState;
         private SortedDictionary<string, string> enteredWords;
         private SortedDictionary<string, uint> enteredChoices;
+        private SortedDictionary<uint?, IState> mIDToIState;
 
         // methods
 
-        public void setCurrentState(int index)
+        IAnswer startExecution(uint? CurrentStateID)
         {
-            mCurrentState = mStates[index];
+            IAnswer ans;
+            IState currentState = mIDToIState[CurrentStateID];
+            ans = currentState.startExecution();
+            return ans;
+        }
+
+        public void setCurrentState(uint? index)
+        {
+            mCurrentState = index;
         }
         public List<bool> runState()
         {
-            IState nextState;
+            uint? nextState;
             IAnswer ans;
             do
             {
-                ans = mCurrentState.startExecution();
+                ans = startExecution(mCurrentState);
                 nextState = ans.getNextState();
                 string typeOfState = ans.getTypeOfState();
                 //Console.WriteLine("Answer contains " + typeOfState);
-                string key = Convert.ToString(mID) + "_" + Convert.ToString(mCurrentState.getID());
+                string key = Convert.ToString(mID) + "_" + Convert.ToString(mCurrentState);
                 switch (typeOfState)
                 {
                     case "Enter word":
@@ -70,17 +77,18 @@ namespace core
         public thread()
         {
             mID = 0;
-            mStates = new List<IState>();
+            mIDToIState = new SortedDictionary<uint?, IState>();
             enteredWords = new SortedDictionary<string, string>();
             enteredChoices = new SortedDictionary<string, uint>();
-    }
+        }
         public void setID(uint input)
         {
             mID = input;
         }
         public void addState(IState input)
         {
-            mStates.Add(input);
+
+            mIDToIState.Add(input.getID(), input);
         }
     }
 }

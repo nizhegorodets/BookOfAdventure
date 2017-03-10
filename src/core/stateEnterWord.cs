@@ -24,7 +24,7 @@ namespace core
     {
         private string mEnteredWord;
 
-        public stateEnterWord(uint id, string description, IState[] nextStates)
+        public stateEnterWord(uint id, string description, uint?[] nextStates)
         {
             this.mID = id;
             this.mDescription = description;
@@ -36,10 +36,12 @@ namespace core
             this.mEndThread = false;
         }
 
+        public override void Init() { }
+
         public override IAnswer startExecution()
         {
             this.mEnteredWord = Console.ReadLine();
-            return mAnswer; 
+            return mAnswer;
         }
     }
 }

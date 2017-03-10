@@ -28,8 +28,8 @@ namespace core
         {
             mTitle = title;
         }
-        public stateWait(){ }
-        public stateWait(uint mID, string mDescription, IState[] mNextStates, uint mDelay, string title)
+        public stateWait() { }
+        public stateWait(uint mID, string mDescription, uint?[] mNextStates, uint mDelay, string title)
         {
             this.mID = mID;
             this.mDescription = mDescription;
@@ -41,6 +41,8 @@ namespace core
             this.mEndGame = false;
             this.mEndThread = false;
         }
+
+        public override void Init() { }
 
         public override IAnswer startExecution()
         {

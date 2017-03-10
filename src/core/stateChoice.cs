@@ -31,7 +31,7 @@ namespace core
             mTitle = input;
         }
         public stateChoice() { }
-        public stateChoice(uint mID, string mDescription, IState[] mNextStates, Choice[] mChoices, string title)
+        public stateChoice(uint mID, string mDescription, uint?[] mNextStates, Choice[] mChoices, string title)
         {
             this.mID = mID;
             this.mDescription = mDescription;
@@ -42,9 +42,10 @@ namespace core
             this.mAnswer = new choiceAnswer("Choice", mNextStates[0], false, false, 0);
             this.mEndGame = false;
             this.mEndThread = false;
-            this.mChoosedChoice = 0;
         }
-        
+
+        public override void Init() { this.mChoosedChoice = 0; }
+
         public override IAnswer startExecution()
         {
             Console.WriteLine("    " + mTitle);

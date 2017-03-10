@@ -33,7 +33,7 @@ namespace core
         private List<INPC> NPCs;
         private List<thread> threads;
         private List<thread> activeThreads;
-       
+
 
         // methods
         public void startGame()
@@ -41,11 +41,11 @@ namespace core
             foreach (thread th in activeThreads)
             {
                 List<bool> endFlags = new List<bool>();
-                endFlags  = th.runState();
+                endFlags = th.runState();
                 bool endTh = endFlags[0];
                 bool endGame = endFlags[1];
 
-                if(endTh)
+                if (endTh)
                 {
                     //deleteActiveThreads(th);
                 }
@@ -86,7 +86,7 @@ namespace core
                 {
                     threads.Remove(input);
                     input = null;
-                } 
+                }
             }
             throw new coreErrors((int)coreErrors.errorCodes.ELEMENT_DOES_NOT_EXIST_IN_THREADS);
         }

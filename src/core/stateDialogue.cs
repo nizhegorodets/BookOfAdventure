@@ -26,7 +26,7 @@ namespace core
         private uint mCurrentPhrase;
 
         public stateDialogue() { }
-        public stateDialogue(uint id, string description, IState[] nextStates, Phrase[] phrases, bool endTh, bool endGame)
+        public stateDialogue(uint id, string description, uint?[] nextStates, Phrase[] phrases, bool endTh, bool endGame)
         {
             this.mID = id;
             this.mDescription = description;
@@ -38,12 +38,13 @@ namespace core
             // set endState automatically
             if ((mEndGame == true) || (mEndThread == true))
             {
-                mNextStates = new IState[1];
+                mNextStates = new uint?[1];
                 mNextStates[0] = null;
             }
             // The answer doesn't return nothing
             this.mAnswer = new emptyAnswer("Dialogue", mNextStates[0], mEndThread, mEndGame);
         }
+        public override void Init() { }
 
         public override IAnswer startExecution()
         {

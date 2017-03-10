@@ -24,10 +24,11 @@ namespace core
     {
         protected uint mID;
         protected string mDescription;
-        protected IState[] mNextStates;
+        protected uint?[] mNextStates;
         protected IAnswer mAnswer;
         protected bool mEndThread, mEndGame;
 
+        public abstract void Init();
         public abstract IAnswer startExecution();
         public uint getID() { return mID; }
     }

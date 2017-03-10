@@ -22,6 +22,7 @@ namespace core
 {
     interface IState
     {
+        void Init();
         IAnswer startExecution();
         uint getID();
     }
