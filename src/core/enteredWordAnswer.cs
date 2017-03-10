@@ -43,5 +43,11 @@ namespace core
         {
             return word;
         }
+
+        public string Word
+        {
+            get { return word; }
+            set { word = value; }
+        }
     }
 }

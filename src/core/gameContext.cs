@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -115,5 +117,61 @@ namespace core
             playerName = input;
         }
 
+
+        public ILocation CurrLocation
+        {
+            get { return currLocation; }
+            set { currLocation = value; }
+        }
+        public string PlayerName
+        {
+            get { return playerName; }
+            set { playerName = value; }
+        }
+
+        public List<ILocation> Locations
+        {
+            get { return locations; }
+            set { locations = value; }
+        }
+        public List<INPC> nPCs
+        {
+            get { return NPCs; }
+            set { NPCs = value; }
+        }
+
+        public List<thread> Threads
+        {
+            get { return threads; }
+            set { threads = value; }
+        }
+        public List<thread> ActiveThreads
+        {
+            get { return activeThreads; }
+            set { activeThreads = value; }
+        }
+
+        public void Save(string file)
+        {
+            string json = JsonConvert.SerializeObject(this, Formatting.Indented, new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.Auto
+            });
+            File.WriteAllText(file, json, Encoding.UTF8);
+        }
+
+        public void Load(string file)
+        {
+            gameContext obj = JsonConvert.DeserializeObject<gameContext>(File.ReadAllText(file), new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.Auto
+            });
+            this.currLocation = obj.currLocation;
+            this.playerName = obj.playerName;
+            this.locations = obj.locations;
+            this.NPCs = obj.NPCs;
+            this.threads = obj.threads;
+            this.activeThreads = obj.activeThreads;
+        }
     }
 }

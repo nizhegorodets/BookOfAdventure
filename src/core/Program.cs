@@ -88,7 +88,21 @@ namespace core
             thread1.setCurrentState(0);
             gContext.addThreads(thread1);
             gContext.addActiveThreads(thread1);
-            gContext.startGame();
+
+            // Сохраняем созданный квест в файл
+
+            string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\people.json";
+            gContext.Save(path);
+
+            // Можно загрузить его в новую переменную и запустить
+
+            
+            gameContext gContext1 = new gameContext();
+            gContext1.Load(path);
+            gContext1.startGame();
+            
+
+            gContext1.startGame();
         }
     }
 }

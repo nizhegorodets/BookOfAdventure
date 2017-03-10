@@ -34,5 +34,16 @@ namespace core
         {
             return mText;
         }
+
+        public uint MID
+        {
+            get { return mID; }
+            set { mID = value; }
+        }
+        public string MText
+        {
+            get { return mText; }
+            set { mText = value; }
+        }
     }
 }

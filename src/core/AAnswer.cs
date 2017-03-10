@@ -32,5 +32,26 @@ namespace core
         public abstract string getData();
         public bool getEndTh() { return mEndThread; }
         public bool getEndGame() { return mEndGame; }
+
+        public uint? MNextState
+        {
+            get { return mNextState; }
+            set { mNextState = value; }
+        }
+        public string MTypeOfState
+        {
+            get { return mTypeOfState; }
+            set { mTypeOfState = value; }
+        }
+        public bool MEndThread
+        {
+            get { return mEndThread; }
+            set { mEndThread = value; }
+        }
+        public bool MEndGame
+        {
+            get { return mEndGame; }
+            set { mEndGame = value; }
+        }
     }
 }

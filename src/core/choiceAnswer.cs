@@ -48,5 +48,11 @@ namespace core
         {
             return Convert.ToString(numberOfChoice);
         }
+
+        public uint NumberOfChoice
+        {
+            get { return numberOfChoice; }
+            set { numberOfChoice = value; }
+        }
     }
 }

@@ -50,5 +50,17 @@ namespace core
             System.Threading.Thread.Sleep(Convert.ToInt32(mDelay) * 1000);
             return mAnswer;
         }
+
+        public uint MDelay
+        {
+            get { return mDelay; }
+            set { mDelay = value; }
+        }
+
+        public string MTitle
+        {
+            get { return mTitle; }
+            set { mTitle = value; }
+        }
     }
 }

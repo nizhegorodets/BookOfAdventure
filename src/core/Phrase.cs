@@ -35,5 +35,17 @@ namespace core
         {
             Console.WriteLine("    " + this.mPhrase);
         }
+
+        public uint MPhraseOrigin
+        {
+            get { return mPhraseOrigin; }
+            set { mPhraseOrigin = value; }
+        }
+
+        public string MPhrase
+        {
+            get { return mPhrase; }
+            set { mPhrase = value; }
+        }
     }
 }

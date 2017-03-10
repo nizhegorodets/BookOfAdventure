@@ -56,5 +56,16 @@ namespace core
             }
             return mAnswer;
         }
+        public Phrase[] MPhrases
+        {
+            get { return mPhrases; }
+            set { mPhrases = value; }
+        }
+
+        public uint MCurrentPhrase
+        {
+            get { return mCurrentPhrase; }
+            set { mCurrentPhrase = value; }
+        }
     }
 }

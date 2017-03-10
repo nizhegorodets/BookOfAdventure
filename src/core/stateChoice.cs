@@ -59,5 +59,23 @@ namespace core
             mAnswer.setNextState(this.mNextStates[this.mChoosedChoice - 1]);
             return mAnswer;
         }
+
+        public uint MChoosedChoice
+        {
+            get { return mChoosedChoice; }
+            set { mChoosedChoice = value; }
+        }
+
+        public Choice[] MChoices
+        {
+            get { return mChoices; }
+            set { mChoices = value; }
+        }
+
+        public string MTitle
+        {
+            get { return mTitle; }
+            set { mTitle = value; }
+        }
     }
 }

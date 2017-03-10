@@ -90,5 +90,35 @@ namespace core
 
             mIDToIState.Add(input.getID(), input);
         }
+
+        public uint MID
+        {
+            get { return mID; }
+            set { mID = value; }
+        }
+        
+        public uint? MCurrentState
+        {
+            get { return mCurrentState; }
+            set { mCurrentState = value; }
+        }
+
+        public SortedDictionary<string, string> EnteredWords
+        {
+            get { return enteredWords; }
+            set { enteredWords = value; }
+        }
+
+        public SortedDictionary<string, uint> EnteredChoices
+        {
+            get { return enteredChoices; }
+            set { enteredChoices = value; }
+        }
+
+        public SortedDictionary<uint?, IState> MIDToIState
+        {
+            get { return mIDToIState; }
+            set { mIDToIState = value; }
+        }
     }
 }

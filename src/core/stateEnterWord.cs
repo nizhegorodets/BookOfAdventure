@@ -43,5 +43,11 @@ namespace core
             this.mEnteredWord = Console.ReadLine();
             return mAnswer;
         }
+
+        public string MEnteredWord
+        {
+            get { return mEnteredWord; }
+            set { mEnteredWord = value; }
+        }
     }
 }

@@ -31,5 +31,36 @@ namespace core
         public abstract void Init();
         public abstract IAnswer startExecution();
         public uint getID() { return mID; }
+
+        public uint MID
+        {
+            get { return mID; }
+            set { mID = value; }
+        }
+        public string MDescription
+        {
+            get { return mDescription; }
+            set { mDescription = value; }
+        }
+        public uint?[] MNextStates
+        {
+            get { return mNextStates; }
+            set { mNextStates = value; }
+        }
+        public IAnswer MAnswer
+        {
+            get { return mAnswer; }
+            set { mAnswer = value; }
+        }
+        public bool MEndThread
+        {
+            get { return mEndThread; }
+            set { mEndThread = value; }
+        }
+        public bool MEndGame
+        {
+            get { return mEndGame; }
+            set { mEndGame = value; }
+        }
     }
 }
