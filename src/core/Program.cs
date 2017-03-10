@@ -102,7 +102,7 @@ namespace core
             gContext1.startGame();
             
 
-            gContext1.startGame();
+            //gContext.startGame();
         }
     }
 }

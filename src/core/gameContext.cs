@@ -148,7 +148,7 @@ namespace core
             get { return threads; }
             set { threads = value; }
         }
-        public List<thread> ActiveThreads
+        public List<uint?> ActiveThreads
         {
             get { return activeThreads; }
             set { activeThreads = value; }

@@ -91,7 +91,7 @@ namespace core
             mIDToIState.Add(input.getID(), input);
         }
 
-        public uint MID
+        public uint? MID
         {
             get { return mID; }
             set { mID = value; }
