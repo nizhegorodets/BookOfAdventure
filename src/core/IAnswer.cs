@@ -22,10 +22,10 @@ namespace core
 {
     interface IAnswer
     {
-        uint? getNextState();
+        IState getNextState();
         string getTypeOfState();
         string getData();
-        void setNextState(uint? nextState);
+        void setNextState(IState nextState);
         bool getEndTh();
         bool getEndGame();
     }

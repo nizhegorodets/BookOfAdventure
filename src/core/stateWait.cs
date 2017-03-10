@@ -29,7 +29,7 @@ namespace core
             mTitle = title;
         }
         public stateWait(){ }
-        public stateWait(uint mID, string mDescription, uint?[] mNextStates, uint mDelay, string title)
+        public stateWait(uint mID, string mDescription, IState[] mNextStates, uint mDelay, string title)
         {
             this.mID = mID;
             this.mDescription = mDescription;

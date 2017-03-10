@@ -22,18 +22,18 @@ namespace core
 {
     class emptyAnswer : AAnswer
     {
-        public emptyAnswer(string inType, uint? inState, bool inEndTh, bool inEndG)
+        public emptyAnswer(string inType, IState inState, bool inEndTh, bool inEndG)
         {
             mNextState = inState;
             mTypeOfState = inType;
             mEndThread = inEndTh;
             mEndGame = inEndG;
         }
-        public override uint? getNextState()
+        public override IState getNextState()
         {
             return mNextState;
         }
-        public override void setNextState(uint? nextState)
+        public override void setNextState(IState nextState)
         {
             mNextState = nextState;
         }

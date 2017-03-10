@@ -22,12 +22,12 @@ namespace core
 {
     abstract class AAnswer : IAnswer
     {
-        protected uint? mNextState;
+        protected IState mNextState;
         protected string mTypeOfState;
         protected bool mEndThread, mEndGame;
 
-        public abstract uint? getNextState();
-        public abstract void setNextState(uint? nextState);
+        public abstract IState getNextState();
+        public abstract void setNextState(IState nextState);
         public string getTypeOfState() { return mTypeOfState; }
         public abstract string getData();
         public bool getEndTh() { return mEndThread; }

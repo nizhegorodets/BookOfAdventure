@@ -31,7 +31,7 @@ namespace core
             mTitle = input;
         }
         public stateChoice() { }
-        public stateChoice(uint mID, string mDescription, uint?[] mNextStates, Choice[] mChoices, string title)
+        public stateChoice(uint mID, string mDescription, IState[] mNextStates, Choice[] mChoices, string title)
         {
             this.mID = mID;
             this.mDescription = mDescription;

@@ -23,36 +23,29 @@ namespace core
     class thread
     {
         private uint mID;
-        private uint? mCurrentState;
+        private List<IState> mStates;
+        private IState mCurrentState;
+        // key = mID(thread)_mID(AState)
         private SortedDictionary<string, string> enteredWords;
         private SortedDictionary<string, uint> enteredChoices;
-        private SortedDictionary<uint?, IState> mIDToIState;
 
         // methods
 
-        IAnswer startExecution(uint? CurrentStateID)
+        public void setCurrentState(int index)
         {
-            IAnswer ans;
-            IState currentState = mIDToIState[CurrentStateID];
-            ans = currentState.startExecution();
-            return ans;
-        }
-
-        public void setCurrentState(uint? index)
-        {
-            mCurrentState = index;
+            mCurrentState = mStates[index];
         }
         public List<bool> runState()
         {
-            uint? nextState;
+            IState nextState;
             IAnswer ans;
             do
             {
-                ans = startExecution(mCurrentState);
+                ans = mCurrentState.startExecution();
                 nextState = ans.getNextState();
                 string typeOfState = ans.getTypeOfState();
                 //Console.WriteLine("Answer contains " + typeOfState);
-                string key = Convert.ToString(mID) + "_" + Convert.ToString(mCurrentState);
+                string key = Convert.ToString(mID) + "_" + Convert.ToString(mCurrentState.getID());
                 switch (typeOfState)
                 {
                     case "Enter word":
@@ -77,7 +70,7 @@ namespace core
         public thread()
         {
             mID = 0;
-            mIDToIState = new SortedDictionary<uint?, IState>();
+            mStates = new List<IState>();
             enteredWords = new SortedDictionary<string, string>();
             enteredChoices = new SortedDictionary<string, uint>();
     }
@@ -87,8 +80,7 @@ namespace core
         }
         public void addState(IState input)
         {
-
-            mIDToIState.Add(input.getID(), input);
+            mStates.Add(input);
         }
     }
 }

@@ -24,7 +24,7 @@ namespace core
     {
         protected uint mID;
         protected string mDescription;
-        protected uint?[] mNextStates;
+        protected IState[] mNextStates;
         protected IAnswer mAnswer;
         protected bool mEndThread, mEndGame;
 

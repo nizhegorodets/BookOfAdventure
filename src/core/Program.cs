@@ -30,12 +30,12 @@ namespace core
                new Phrase(0, "Ты жив и теперь твоя кличка <<Парфюмер>>. Хэппи энд."),
             };
             IState state5 = new stateDialogue();
-            uint?[] nextStates = new uint?[0]{};
+            IState[] nextStates = new IState[0]{};
             state5 = new stateDialogue(4, "state5 - dialogue", nextStates, phrases, true, true);
             
             // create state4 (ожидание 5 секунд)
             IState state4 = new stateWait();
-            nextStates = new uint?[1] { state5.getID() };
+            nextStates = new IState[1] { state5 };
             string title = "Ты скидываешь ботинки и верхнюю одежду...";
             state4 = new stateWait(3, "state4 - wait", nextStates, 7, title);
 
@@ -54,7 +54,7 @@ namespace core
                new Phrase(0, "Ты мертв.")
             };
             IState state3 = new stateDialogue();
-            nextStates = new uint?[0]{};
+            nextStates = new IState[0]{};
             state3 = new stateDialogue(2, "state4 - dialogue", nextStates, phrases, true, true);
 
             // create state2 (куда ты направляешься?)
@@ -64,7 +64,7 @@ namespace core
                 new Choice(1, "В комнату к шумной компанией")
             };
             IState state2 = new stateChoice();
-            nextStates = new uint?[2] {state3.getID(), state4.getID()};
+            nextStates = new IState[2] {state3, state4};
             title = "Куда ты решил направиться первым делом?";
             state2 = new stateChoice(1, "state2 - choice", nextStates, choices, title);
 
@@ -75,7 +75,7 @@ namespace core
                            new Phrase(0, "Я их тебе сейчас представлю... Скидывай ты уже наконец свое пальто!"),
                            new Phrase(0, "Кстати, мы с женкой купили новый первоклассный холодильник марки <<Морозко>>")
                        };
-            nextStates = new uint?[1] {state2.getID()};
+            nextStates = new IState[1] {state2};
             IState state1 = new stateDialogue(0, "state1 - dialogue", nextStates, phrases, false, false);
 
             // add state to thread
