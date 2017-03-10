@@ -24,7 +24,7 @@ namespace core
     {
         private string mEnteredWord;
 
-        public stateEnterWord(uint id, string description, IState[] nextStates)
+        public stateEnterWord(uint id, string description, uint?[] nextStates)
         {
             this.mID = id;
             this.mDescription = description;

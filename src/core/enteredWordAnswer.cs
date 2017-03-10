@@ -23,7 +23,7 @@ namespace core
     class enteredWordAnswer : AAnswer
     {
         private string word;
-        public enteredWordAnswer(string inType, IState inState, bool inEndTh, bool inEndG, string inWord)
+        public enteredWordAnswer(string inType, uint? inState, bool inEndTh, bool inEndG, string inWord)
         {
             mNextState = inState;
             mTypeOfState = inType;
@@ -31,11 +31,11 @@ namespace core
             mEndGame = inEndG;
             word = inWord;
         }
-        public override IState getNextState()
+        public override uint? getNextState()
         {
             return mNextState;
         }
-        public override void setNextState(IState nextState)
+        public override void setNextState(uint? nextState)
         {
             mNextState = nextState;
         }
