@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    interface IAnswer
+    public interface IAnswer
     {
         uint? getNextState();
         string getTypeOfState();

@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    interface ILocation
+    public interface ILocation
     {
     }
 }

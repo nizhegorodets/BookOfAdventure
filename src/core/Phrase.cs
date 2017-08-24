@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    class Phrase : IPhrase
+    public class Phrase : IPhrase
     {
         private uint mPhraseOrigin;
         private string mPhrase;

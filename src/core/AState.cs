@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    abstract class AState : IState
+    public abstract class AState : IState
     {
         protected uint mID;
         protected string mDescription;
@@ -29,9 +29,33 @@ namespace core
         protected bool mEndThread, mEndGame;
 
         public abstract void Init();
+        public abstract string getDescription();
         public abstract IAnswer startExecution();
         public uint getID() { return mID; }
+        public uint?[] getNextStates() { return mNextStates; }
 
+        public string getGeneralDescription()
+        {
+            string description = "[";
+            //identify type
+            string type = Convert.ToString(this.GetType());
+            description += type[type.IndexOf(".") + ".state".Length];
+            description += "-";
+            //get ID
+            description += Convert.ToString(mID);
+            description += "]: ";
+            return description;
+        }
+
+        public bool isEndGame()
+        {
+            return mEndGame;
+        }
+
+        public bool isEndThread()
+        {
+            return mEndThread;
+        }
         public uint MID
         {
             get { return mID; }

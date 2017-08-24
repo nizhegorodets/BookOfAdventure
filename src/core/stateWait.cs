@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    class stateWait : AState
+    public class stateWait : AState
     {
         private uint mDelay;
         private string mTitle;
@@ -61,6 +61,14 @@ namespace core
         {
             get { return mTitle; }
             set { mTitle = value; }
+        }
+        public override string getDescription()
+        {
+            string description = getGeneralDescription();
+            description += (Convert.ToString(mDelay) + "sec, ");
+            description += mTitle.Substring(0, 30);
+            description += "...";
+            return description;
         }
     }
 }

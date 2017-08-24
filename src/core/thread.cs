@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    class thread
+    public class thread
     {
         private uint? mID;
         private uint? mCurrentState;
@@ -29,6 +29,10 @@ namespace core
         private SortedDictionary<uint?, IState> mIDToIState;
 
         // methods
+        public void deleteState(uint? delIndex)
+        {
+            mIDToIState.Remove(delIndex);
+        }
         public uint? getThID() { return mID; }
         IAnswer startExecution(uint? CurrentStateID)
         {

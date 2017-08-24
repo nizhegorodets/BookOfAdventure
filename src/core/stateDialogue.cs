@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    class stateDialogue : AState
+    public class stateDialogue : AState
     {
         private Phrase[] mPhrases;
         private uint mCurrentPhrase;
@@ -66,6 +66,18 @@ namespace core
         {
             get { return mCurrentPhrase; }
             set { mCurrentPhrase = value; }
+        }
+
+        public override string getDescription()
+        {
+            string description = getGeneralDescription();
+            int phLength = mPhrases[0].MPhrase.Length;
+            if (phLength > 30)
+                description += mPhrases[0].MPhrase.Substring(0,30);
+            else
+                description += mPhrases[0].MPhrase.Substring(0, phLength - 1);
+            description += "...";
+            return description;
         }
     }
 }

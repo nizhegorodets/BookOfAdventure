@@ -20,10 +20,11 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    interface IState
+    public interface IState
     {
         void Init();
         IAnswer startExecution();
         uint getID();
+        string getDescription();
     }
 }

@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    class stateChoice : AState
+    public class stateChoice : AState
     {
         private uint mChoosedChoice;
         private Choice[] mChoices;
@@ -53,7 +53,7 @@ namespace core
             foreach (Choice ch in mChoices)
             {
                 count++;
-                Console.WriteLine("        " + Convert.ToString(count) + ". " + ch.getText());
+                Console.WriteLine("        " + Convert.ToString(count) + ". " + ch.MText);
             }
             this.mChoosedChoice = uint.Parse(Console.ReadLine());
             mAnswer.setNextState(this.mNextStates[this.mChoosedChoice - 1]);
@@ -76,6 +76,13 @@ namespace core
         {
             get { return mTitle; }
             set { mTitle = value; }
+        }
+        public override string getDescription()
+        {
+            string description = getGeneralDescription();
+            description += mTitle.Substring(0, 30);
+            description += "...";
+            return description;
         }
     }
 }

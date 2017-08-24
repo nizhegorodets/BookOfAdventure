@@ -20,7 +20,7 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    class Choice
+    public class Choice
     {
         private uint mID;
         private string mText;
@@ -30,11 +30,6 @@ namespace core
             this.mID = mID;
             this.mText = mText;
         }
-        public string getText()
-        {
-            return mText;
-        }
-
         public uint MID
         {
             get { return mID; }

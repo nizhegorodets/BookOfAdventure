@@ -49,5 +49,10 @@ namespace core
             get { return mEnteredWord; }
             set { mEnteredWord = value; }
         }
+        public override string getDescription()
+        {
+            string description = getGeneralDescription();
+            return description;
+        }
     }
 }

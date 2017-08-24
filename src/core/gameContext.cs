@@ -24,7 +24,7 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    class gameContext
+    public class gameContext
     {
         // information about player
         private ILocation currLocation;
