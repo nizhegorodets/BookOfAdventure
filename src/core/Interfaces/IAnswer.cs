@@ -1,4 +1,4 @@
-﻿// core 2017 Anikin Dmitry, Mikhail Kudimov
+﻿// Copyright 2017 Anikin Dmitry, Mikhail Kudimov
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -20,25 +20,13 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    public class Choice
+    public interface IAnswer
     {
-        private uint mID;
-        private string mText;
-
-        public Choice(uint mID, string mText)
-        {
-            this.mID = mID;
-            this.mText = mText;
-        }
-        public uint MID
-        {
-            get { return mID; }
-            set { mID = value; }
-        }
-        public string MText
-        {
-            get { return mText; }
-            set { mText = value; }
-        }
+        uint? getNextState();
+        string getTypeOfState();
+        string getData();
+        void setNextState(uint? nextState);
+        bool getEndTh();
+        bool getEndGame();
     }
 }

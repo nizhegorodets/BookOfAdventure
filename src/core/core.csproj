@@ -47,27 +47,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AAnswer.cs" />
-    <Compile Include="AState.cs" />
-    <Compile Include="Choice.cs" />
-    <Compile Include="choiceAnswer.cs" />
-    <Compile Include="coreErrors.cs" />
-    <Compile Include="emptyAnswer.cs" />
-    <Compile Include="enteredWordAnswer.cs" />
-    <Compile Include="gameContext.cs" />
-    <Compile Include="IAnswer.cs" />
-    <Compile Include="ILocation.cs" />
-    <Compile Include="INPC.cs" />
-    <Compile Include="IPhrase.cs" />
-    <Compile Include="IState.cs" />
-    <Compile Include="Phrase.cs" />
+    <Compile Include="Abstract classes\AAnswer.cs" />
+    <Compile Include="Abstract classes\AState.cs" />
+    <Compile Include="Other classes\Choice.cs" />
+    <Compile Include="Other classes\choiceAnswer.cs" />
+    <Compile Include="Other classes\coreErrors.cs" />
+    <Compile Include="Other classes\emptyAnswer.cs" />
+    <Compile Include="Other classes\enteredWordAnswer.cs" />
+    <Compile Include="Other classes\gameContext.cs" />
+    <Compile Include="Interfaces\IAnswer.cs" />
+    <Compile Include="Interfaces\ILocation.cs" />
+    <Compile Include="Interfaces\INPC.cs" />
+    <Compile Include="Interfaces\IPhrase.cs" />
+    <Compile Include="Interfaces\IState.cs" />
+    <Compile Include="Other classes\Phrase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="stateChoice.cs" />
-    <Compile Include="stateDialogue.cs" />
-    <Compile Include="stateEnterWord.cs" />
-    <Compile Include="stateWait.cs" />
-    <Compile Include="thread.cs" />
+    <Compile Include="States\stateChoice.cs" />
+    <Compile Include="States\stateDialogue.cs" />
+    <Compile Include="States\stateEnterWord.cs" />
+    <Compile Include="States\stateWait.cs" />
+    <Compile Include="Other classes\thread.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

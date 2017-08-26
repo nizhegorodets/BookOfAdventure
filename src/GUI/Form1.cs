@@ -14,6 +14,7 @@ namespace GUI
 {
     public partial class Form1 : Form
     {
+        uint countStates = 0; // number of last state
         gameContext gameContext = new gameContext();
         SortedDictionary<int, uint> indexTreeOfStateToIDOfState = new SortedDictionary<int, uint>();
         IDrawInterface drawObj;
@@ -42,6 +43,7 @@ namespace GUI
 
         public void loadToStateList()
         {
+            countStates = 0;
             TreeOfStates.Items.Clear();
             indexTreeOfStateToIDOfState.Clear();
             foreach (thread th in gameContext.Threads)
@@ -50,6 +52,7 @@ namespace GUI
                 {
                     indexTreeOfStateToIDOfState.Add(TreeOfStates.Items.Count, st.Value.getID());
                     TreeOfStates.Items.Add(st.Value.getDescription());
+                    countStates++;
                 }
             }
         }
@@ -125,6 +128,101 @@ namespace GUI
                     }
                 }
             }
+        }
+
+        private void TreeOfStates_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                int y = e.Y / this.TreeOfStates.ItemHeight;
+
+                if (y < this.TreeOfStates.Items.Count)
+                {
+                    // If get on a item of ListBox
+                    this.TreeOfStates.SelectedIndex = this.TreeOfStates.TopIndex + y;
+                    deleteState.Enabled = true;
+                    createState.Enabled = false;
+                    menuStripStates.Show(this.TreeOfStates, e.Location);
+                }
+                else
+                {
+                    // if not hit on a item of ListBox
+                    deleteState.Enabled = false;
+                    createState.Enabled = true;
+                    menuStripStates.Show(this.TreeOfStates, e.Location);
+                }
+            }
+        }
+
+        private void stateWaitCreate_Click(object sender, EventArgs e)
+        {
+            // selected "State Wait" in context menu
+            if (gameContext.Threads != null)
+            {
+                drawObj = new drawWait(gameContext, PropertiesOfElements);
+                drawObj.createState();
+                this.TreeOfStates.SelectedIndex = (int)countStates - 1;
+            }
+            else
+            {
+                // If the game is not created still 
+                gameContext.init();
+                gameContext.Threads.Add(new thread());
+                drawObj = new drawWait(gameContext, PropertiesOfElements);
+                drawObj.createState();
+                this.TreeOfStates.SelectedIndex = (int)countStates - 1;
+            }
+        }
+
+        private void stateDialogueCreate_Click(object sender, EventArgs e)
+        {
+            // selected "State dialogue" in context menu
+            if (gameContext.Threads != null)
+            {
+                drawObj = new drawDialogue(gameContext, PropertiesOfElements);
+                drawObj.createState();
+                this.TreeOfStates.SelectedIndex = (int)countStates - 1;
+            }
+            else
+            {
+                // If the game is not created still 
+                gameContext.init();
+                gameContext.Threads.Add(new thread());
+                drawObj = new drawDialogue(gameContext, PropertiesOfElements);
+                drawObj.createState();
+                this.TreeOfStates.SelectedIndex = (int)countStates - 1;
+            }
+        }
+
+        private void stateChoiceCreate_Click(object sender, EventArgs e)
+        {
+            // selected "State choice" in context menu
+            if (gameContext.Threads != null)
+            {
+                drawObj = new drawChoice(gameContext, PropertiesOfElements);
+                drawObj.createState();
+                this.TreeOfStates.SelectedIndex = (int)countStates - 1;
+            }
+            else
+            {
+                // If the game is not created still 
+                gameContext.init();
+                gameContext.Threads.Add(new thread());
+                drawObj = new drawChoice(gameContext, PropertiesOfElements);
+                drawObj.createState();
+                this.TreeOfStates.SelectedIndex = (int)countStates - 1;
+            }
+        }
+
+        private void deleteState_Click(object sender, EventArgs e)
+        {
+            // selected "Delete choice" in context menu
+            int index = TreeOfStates.SelectedIndex;
+
+            ADrawInterface.deleteState((uint)indexTreeOfStateToIDOfState[TreeOfStates.SelectedIndex], gameContext);
+
+            if (index != 0)
+                this.TreeOfStates.SelectedIndex = (int)index - 1;
         }
     }
 
