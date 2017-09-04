@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using core;
-
+using core.Other_classes;
 
 namespace GUI
 {
     public partial class Form1 : Form
     {
-        uint countStates = 0; // number of last state
+        // number of last state
+        uint countStates = 0; 
         gameContext gameContext = new gameContext();
         SortedDictionary<int, uint> indexTreeOfStateToIDOfState = new SortedDictionary<int, uint>();
         IDrawInterface drawObj;
@@ -31,7 +32,9 @@ namespace GUI
             {
                 gameContext.Load(openFileDialog1.FileName);
                 loadToStateList();
+                addOriginToolStripMenuItem.Enabled = true;
             }
+            
         }
 
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -223,6 +226,14 @@ namespace GUI
 
             if (index != 0)
                 this.TreeOfStates.SelectedIndex = (int)index - 1;
+        }
+
+        private void addOriginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string promptValue = originPrompt.ShowDialog("ID", "Name", "Adding a new origin...");
+            string[] splited = promptValue.Split();
+            NPC newNPC = new NPC(splited[1], Convert.ToInt32(splited[0]));
+            gameContext.addNPC(newNPC);
         }
     }
 

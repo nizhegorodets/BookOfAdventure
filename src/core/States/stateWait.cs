@@ -40,6 +40,7 @@ namespace core
             this.mAnswer = new emptyAnswer("Wait", mNextStates[0], false, false);
             this.mEndGame = false;
             this.mEndThread = false;
+            this.mOrigin = -1;
         }
 
         public override void Init() { }

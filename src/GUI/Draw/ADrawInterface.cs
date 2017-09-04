@@ -20,6 +20,7 @@ using System.Threading.Tasks;
 using core;
 using System.Windows.Forms;
 using System.Drawing;
+using core.Other_classes;
 
 namespace GUI
 {
@@ -42,6 +43,33 @@ namespace GUI
             labelID.Location = new Point(0 + 20, 45);
             labelID.AutoSize = true;
             canvas.Controls.Add(labelID);
+
+            // create labelOrigin
+            Label labelOrigin = new Label();
+            labelOrigin.Name = "labelOrigin";
+            labelOrigin.Text = "Origin: ";
+            labelOrigin.Location = new Point(labelID.Location.X + labelID.Width + 5, labelID.Location.Y);
+            labelOrigin.AutoSize = true;
+            canvas.Controls.Add(labelOrigin);
+
+            // create originCombobox
+            ComboBox originCombobox = new ComboBox();
+            originCombobox.Name = "originCombobox";
+            originCombobox.Location = new Point(labelOrigin.Location.X + labelOrigin.Width + 5, labelOrigin.Location.Y);
+            if (gc.nPCs != null)
+            {
+                foreach (NPC npc in gc.nPCs)
+                {
+                    originCombobox.Items.Add(npc.MId.ToString() + " - " + npc.MName);
+                }
+                if (inputState.origin != -1)
+                {
+                    string currentValue = inputState.origin.ToString() + " - " + gc.getNPC(inputState.origin).MName;
+                    originCombobox.SelectedIndex = originCombobox.FindString(currentValue);
+                }
+            }
+
+            canvas.Controls.Add(originCombobox);
             // create listNextState
             ListView NextStates = new ListView();
             NextStates.Name = "NextStates";
@@ -49,7 +77,7 @@ namespace GUI
             NextStates.Width = canvas.Width / 3 - 20;
             NextStates.Height = 100;
             NextStates.LabelEdit = true;
-            NextStates.Location = new Point(0 + 20, labelID.Location.Y + labelID.Height + 5);
+            NextStates.Location = new Point(0 + 20, labelID.Location.Y + labelID.Height + 10);
             canvas.Controls.Add(NextStates);
             NextStates.Columns.Add("Next state(s)", NextStates.Width - 4, HorizontalAlignment.Left);
             NextStates.MouseUp += new MouseEventHandler(NextStates_MouseUp);
@@ -108,6 +136,7 @@ namespace GUI
             saveButton.Text = "Save State";
             saveButton.Click += new System.EventHandler(saveButtonClick);
             canvas.Controls.Add(saveButton);
+
         }
         public ADrawInterface(gameContext inputGC, Control inputCanvas) : base() 
         {
@@ -135,6 +164,9 @@ namespace GUI
                 }
             }
             inputState.MNextStates = s;
+
+            combobox = (ComboBox)canvas.Controls.Find("originCombobox", false).FirstOrDefault();
+            inputState.origin = Convert.ToInt32(combobox.Text.Split()[0]);
             return inputState;
         }
 

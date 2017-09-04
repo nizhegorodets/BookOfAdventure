@@ -34,6 +34,7 @@ namespace core
             this.mAnswer = new enteredWordAnswer("Enter word", mNextStates[0], false, false, mEnteredWord);
             this.mEndGame = false;
             this.mEndThread = false;
+            this.mOrigin = -1;
         }
 
         public override void Init() { }

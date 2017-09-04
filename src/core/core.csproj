@@ -60,6 +60,7 @@
     <Compile Include="Interfaces\INPC.cs" />
     <Compile Include="Interfaces\IPhrase.cs" />
     <Compile Include="Interfaces\IState.cs" />
+    <Compile Include="Other classes\NPC.cs" />
     <Compile Include="Other classes\Phrase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

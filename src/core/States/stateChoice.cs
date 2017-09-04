@@ -42,6 +42,7 @@ namespace core
             this.mAnswer = new choiceAnswer("Choice", mNextStates[0], false, false, 0);
             this.mEndGame = false;
             this.mEndThread = false;
+            this.mOrigin = -1;
         }
 
         public override void Init() { this.mChoosedChoice = 0; }

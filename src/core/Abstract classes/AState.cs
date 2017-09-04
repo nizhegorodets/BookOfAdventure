@@ -27,12 +27,19 @@ namespace core
         protected uint?[] mNextStates;
         protected IAnswer mAnswer;
         protected bool mEndThread, mEndGame;
+        protected int mOrigin;
 
         public abstract void Init();
         public abstract string getDescription();
         public abstract IAnswer startExecution();
         public uint getID() { return mID; }
         public uint?[] getNextStates() { return mNextStates; }
+
+		public int origin
+		{
+			get { return mOrigin; }
+			set { mOrigin = value; }
+		}
 
         public string getGeneralDescription()
         {

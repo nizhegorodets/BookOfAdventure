@@ -43,6 +43,7 @@ namespace core
             }
             // The answer doesn't return nothing
             this.mAnswer = new emptyAnswer("Dialogue", mNextStates[0], mEndThread, mEndGame);
+            this.mOrigin = -1;
         }
         public override void Init() { }
 

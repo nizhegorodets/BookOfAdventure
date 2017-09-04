@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using core.Other_classes;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -32,7 +33,7 @@ namespace core
 
         // information about objects of game
         private List<ILocation> locations;
-        private List<INPC> NPCs;
+        private List<NPC> NPCs;
         private List<thread> threads;
         private List<uint?> activeThreads;
 
@@ -66,6 +67,7 @@ namespace core
         {
             threads = new List<thread>();
             activeThreads = new List<uint?>();
+            NPCs = new List<NPC>();
         }
         public void deleteActiveThread(uint? input)
         {
@@ -107,7 +109,7 @@ namespace core
         {
             locations.Add(input);
         }
-        public void addNPC(INPC input)
+        public void addNPC(NPC input)
         {
             NPCs.Add(input);
         }
@@ -137,7 +139,7 @@ namespace core
             get { return locations; }
             set { locations = value; }
         }
-        public List<INPC> nPCs
+        public List<NPC> nPCs
         {
             get { return NPCs; }
             set { NPCs = value; }
@@ -163,6 +165,18 @@ namespace core
             File.WriteAllText(file, json, Encoding.UTF8);
         }
 
+        public NPC getNPC(int index)
+        {
+            foreach(NPC npc in nPCs)
+            {
+                if(npc.MId == index)
+                {
+                    return npc;
+                }
+            }
+            return null;
+        }
+
         public void Load(string file)
         {
             gameContext obj = JsonConvert.DeserializeObject<gameContext>(File.ReadAllText(file), new JsonSerializerSettings
@@ -173,6 +187,10 @@ namespace core
             this.playerName = obj.playerName;
             this.locations = obj.locations;
             this.NPCs = obj.NPCs;
+            if(this.NPCs == null)
+            {
+                this.NPCs = new List<NPC>();
+            }
             this.threads = obj.threads;
             this.activeThreads = obj.activeThreads;
         }
