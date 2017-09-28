@@ -49,6 +49,8 @@
     <Compile Include="Draw\ADrawInterface.cs" />
     <Compile Include="Draw\drawChoice.cs" />
     <Compile Include="Draw\drawDialogue.cs" />
+    <Compile Include="Draw\drawFullScreen.cs" />
+    <Compile Include="Draw\drawImage.cs" />
     <Compile Include="Draw\drawWait.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

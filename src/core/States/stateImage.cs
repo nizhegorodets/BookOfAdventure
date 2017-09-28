@@ -20,61 +20,42 @@ using System.Threading.Tasks;
 
 namespace core
 {
-    public class stateWait : AState
+    public class stateImage : AState
     {
-        private uint mDelay;
-        private string mTitle;
-        public void setTitle(string title)
-        {
-            mTitle = title;
-        }
-        public stateWait() { mOrigin = -1; }
-        public stateWait(uint mID, string mDescription, uint?[] mNextStates, uint mDelay, string title)
+        private string mPath;
+        public stateImage() { mOrigin = -1; }
+        stateImage(uint mID, string mDescription, uint?[] mNextStates, string path)
         {
             this.mID = mID;
             this.mDescription = mDescription;
             this.mNextStates = mNextStates;
-            this.mDelay = mDelay;
-            this.mTitle = title;
             // The answer doesn't return nothing
             this.mAnswer = new emptyAnswer("Wait", mNextStates[0], false, false);
             this.mEndGame = false;
             this.mEndThread = false;
             this.mOrigin = -1;
+            this.mPath = path;
         }
 
         public override void Init() { }
 
         public override IAnswer startExecution()
         {
-            Console.WriteLine(mTitle);
-            System.Threading.Thread.Sleep(Convert.ToInt32(mDelay) * 1000);
+            Console.WriteLine(mPath);
             return mAnswer;
         }
 
-        public uint MDelay
+        public string MPath
         {
-            get { return mDelay; }
-            set { mDelay = value; }
+            get { return mPath; }
+            set { mPath = value; }
         }
 
-        public string MTitle
-        {
-            get { return mTitle; }
-            set { mTitle = value; }
-        }
         public override string getDescription()
         {
             string description = getGeneralDescription();
-            if (mTitle.Length > 30)
-            {
-                description += (Convert.ToString(mDelay) + "sec, ");
-                description += mTitle.Substring(0, 30);
-                description += "...";
-                return description;
-            }
-            else
-                return description + Convert.ToString(mDelay) + "sec, " + mTitle.Substring(0, MTitle.Length);
+            description += " [IMAGE]";
+            return description;
         }
     }
 }

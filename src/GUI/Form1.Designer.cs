@@ -35,6 +35,7 @@
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addOriginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TreeOfStates = new System.Windows.Forms.ListBox();
@@ -56,7 +57,8 @@
             this.stateWaitCreate = new System.Windows.Forms.ToolStripMenuItem();
             this.stateDialogueCreate = new System.Windows.Forms.ToolStripMenuItem();
             this.stateChoiceCreate = new System.Windows.Forms.ToolStripMenuItem();
-            this.addOriginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stateImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stateFullscreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -107,6 +109,14 @@
             this.выйтиToolStripMenuItem.Name = "выйтиToolStripMenuItem";
             this.выйтиToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.выйтиToolStripMenuItem.Text = "Exit";
+            // 
+            // addOriginToolStripMenuItem
+            // 
+            this.addOriginToolStripMenuItem.Enabled = false;
+            this.addOriginToolStripMenuItem.Name = "addOriginToolStripMenuItem";
+            this.addOriginToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.addOriginToolStripMenuItem.Text = "Add origin";
+            this.addOriginToolStripMenuItem.Click += new System.EventHandler(this.addOriginToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -160,7 +170,7 @@
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(760, 179);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Тестовое окно";
@@ -207,7 +217,7 @@
             this.tabPage2.Controls.Add(this.textBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(760, 179);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Лог";
@@ -252,12 +262,12 @@
             this.deleteState,
             this.createState});
             this.menuStripStates.Name = "menuStripStates";
-            this.menuStripStates.Size = new System.Drawing.Size(137, 48);
+            this.menuStripStates.Size = new System.Drawing.Size(153, 70);
             // 
             // deleteState
             // 
             this.deleteState.Name = "deleteState";
-            this.deleteState.Size = new System.Drawing.Size(136, 22);
+            this.deleteState.Size = new System.Drawing.Size(152, 22);
             this.deleteState.Text = "Delete state";
             this.deleteState.Click += new System.EventHandler(this.deleteState_Click);
             // 
@@ -266,39 +276,47 @@
             this.createState.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stateWaitCreate,
             this.stateDialogueCreate,
-            this.stateChoiceCreate});
+            this.stateChoiceCreate,
+            this.stateImageToolStripMenuItem,
+            this.stateFullscreenToolStripMenuItem});
             this.createState.Name = "createState";
-            this.createState.Size = new System.Drawing.Size(136, 22);
+            this.createState.Size = new System.Drawing.Size(152, 22);
             this.createState.Text = "Create state";
             // 
             // stateWaitCreate
             // 
             this.stateWaitCreate.Name = "stateWaitCreate";
-            this.stateWaitCreate.Size = new System.Drawing.Size(149, 22);
+            this.stateWaitCreate.Size = new System.Drawing.Size(154, 22);
             this.stateWaitCreate.Text = "State wait";
             this.stateWaitCreate.Click += new System.EventHandler(this.stateWaitCreate_Click);
             // 
             // stateDialogueCreate
             // 
             this.stateDialogueCreate.Name = "stateDialogueCreate";
-            this.stateDialogueCreate.Size = new System.Drawing.Size(149, 22);
+            this.stateDialogueCreate.Size = new System.Drawing.Size(154, 22);
             this.stateDialogueCreate.Text = "State dialogue";
             this.stateDialogueCreate.Click += new System.EventHandler(this.stateDialogueCreate_Click);
             // 
             // stateChoiceCreate
             // 
             this.stateChoiceCreate.Name = "stateChoiceCreate";
-            this.stateChoiceCreate.Size = new System.Drawing.Size(149, 22);
+            this.stateChoiceCreate.Size = new System.Drawing.Size(154, 22);
             this.stateChoiceCreate.Text = "State choice";
             this.stateChoiceCreate.Click += new System.EventHandler(this.stateChoiceCreate_Click);
             // 
-            // addOriginToolStripMenuItem
+            // stateImageToolStripMenuItem
             // 
-            this.addOriginToolStripMenuItem.Enabled = false;
-            this.addOriginToolStripMenuItem.Name = "addOriginToolStripMenuItem";
-            this.addOriginToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.addOriginToolStripMenuItem.Text = "Add origin";
-            this.addOriginToolStripMenuItem.Click += new System.EventHandler(this.addOriginToolStripMenuItem_Click);
+            this.stateImageToolStripMenuItem.Name = "stateImageToolStripMenuItem";
+            this.stateImageToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.stateImageToolStripMenuItem.Text = "State image";
+            this.stateImageToolStripMenuItem.Click += new System.EventHandler(this.stateImageToolStripMenuItem_Click);
+            // 
+            // stateFullscreenToolStripMenuItem
+            // 
+            this.stateFullscreenToolStripMenuItem.Name = "stateFullscreenToolStripMenuItem";
+            this.stateFullscreenToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.stateFullscreenToolStripMenuItem.Text = "State fullscreen";
+            this.stateFullscreenToolStripMenuItem.Click += new System.EventHandler(this.stateFullscreenToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -356,6 +374,8 @@
         private System.Windows.Forms.ToolStripMenuItem stateDialogueCreate;
         private System.Windows.Forms.ToolStripMenuItem stateChoiceCreate;
         private System.Windows.Forms.ToolStripMenuItem addOriginToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stateImageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stateFullscreenToolStripMenuItem;
     }
 }
 

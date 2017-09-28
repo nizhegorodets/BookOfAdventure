@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using core;
 using core.Other_classes;
+using GUI.Draw;
 
 namespace GUI
 {
@@ -84,6 +85,9 @@ namespace GUI
                     case 'C':
                         myBrush = Brushes.DarkGreen;
                         break;
+                    case 'I':
+                        myBrush = Brushes.Purple;
+                        break;
 
                 }
 
@@ -124,6 +128,12 @@ namespace GUI
                                 break;
                             case 'C':
                                 drawObj = new drawChoice(gameContext, PropertiesOfElements);
+                                break;
+                            case 'I':
+                                drawObj = new drawImage(gameContext, PropertiesOfElements);
+                                break;
+                            case 'F':
+                                drawObj = new drawFullScreen(gameContext, PropertiesOfElements);
                                 break;
                         }
                         drawObj.drawInterface(selectedState);
@@ -234,6 +244,47 @@ namespace GUI
             string[] splited = promptValue.Split();
             NPC newNPC = new NPC(splited[1], Convert.ToInt32(splited[0]));
             gameContext.addNPC(newNPC);
+        }
+
+        private void stateImageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // selected "State image" in context menu
+            if (gameContext.Threads != null)
+            {
+                drawObj = new drawImage(gameContext, PropertiesOfElements);
+                drawObj.createState();
+                this.TreeOfStates.SelectedIndex = (int)countStates - 1;
+            }
+            else
+            {
+                // If the game is not created still 
+                gameContext.init();
+                gameContext.Threads.Add(new thread());
+                drawObj = new drawChoice(gameContext, PropertiesOfElements);
+                drawObj.createState();
+                this.TreeOfStates.SelectedIndex = (int)countStates - 1;
+            }
+        }
+
+        private void stateFullscreenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // selected "State FullScreen" in context menu
+            if (gameContext.Threads != null)
+            {
+                drawObj = new drawFullScreen(gameContext, PropertiesOfElements);
+                drawObj.createState();
+                this.TreeOfStates.SelectedIndex = (int)countStates - 1;
+            }
+            else
+            {
+                // If the game is not created still 
+                gameContext.init();
+                gameContext.Threads.Add(new thread());
+                drawObj = new drawFullScreen(gameContext, PropertiesOfElements);
+                drawObj.createState();
+                this.TreeOfStates.SelectedIndex = (int)countStates - 1;
+            }
+
         }
     }
 
