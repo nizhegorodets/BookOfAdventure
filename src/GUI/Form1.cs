@@ -286,6 +286,29 @@ namespace GUI
             }
 
         }
+
+        private void addThreadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string promptValue = threadPrompt.ShowDialog("Description", "Adding a new thread...");
+            int newID = -1;
+            for(int i = 0; i < gameContext.Threads.Count; i++)
+            {
+                if(gameContext.Threads[i].MID != i)
+                {
+                    newID = i;
+                    break;
+                }
+            }
+            if (newID < 0)
+                newID = gameContext.Threads.Count;
+
+
+            thread thread = new thread();
+            thread.setID((uint)newID);
+            thread.MDescription = promptValue;
+
+            gameContext.Threads.Add(thread);
+        }
     }
 
 }

@@ -59,6 +59,7 @@
             this.stateChoiceCreate = new System.Windows.Forms.ToolStripMenuItem();
             this.stateImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stateFullscreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addThreadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -73,6 +74,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
             this.addOriginToolStripMenuItem,
+            this.addThreadToolStripMenuItem,
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -262,12 +264,12 @@
             this.deleteState,
             this.createState});
             this.menuStripStates.Name = "menuStripStates";
-            this.menuStripStates.Size = new System.Drawing.Size(153, 70);
+            this.menuStripStates.Size = new System.Drawing.Size(137, 48);
             // 
             // deleteState
             // 
             this.deleteState.Name = "deleteState";
-            this.deleteState.Size = new System.Drawing.Size(152, 22);
+            this.deleteState.Size = new System.Drawing.Size(136, 22);
             this.deleteState.Text = "Delete state";
             this.deleteState.Click += new System.EventHandler(this.deleteState_Click);
             // 
@@ -280,7 +282,7 @@
             this.stateImageToolStripMenuItem,
             this.stateFullscreenToolStripMenuItem});
             this.createState.Name = "createState";
-            this.createState.Size = new System.Drawing.Size(152, 22);
+            this.createState.Size = new System.Drawing.Size(136, 22);
             this.createState.Text = "Create state";
             // 
             // stateWaitCreate
@@ -317,6 +319,13 @@
             this.stateFullscreenToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.stateFullscreenToolStripMenuItem.Text = "State fullscreen";
             this.stateFullscreenToolStripMenuItem.Click += new System.EventHandler(this.stateFullscreenToolStripMenuItem_Click);
+            // 
+            // addThreadToolStripMenuItem
+            // 
+            this.addThreadToolStripMenuItem.Name = "addThreadToolStripMenuItem";
+            this.addThreadToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.addThreadToolStripMenuItem.Text = "Add thread";
+            this.addThreadToolStripMenuItem.Click += new System.EventHandler(this.addThreadToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -376,6 +385,7 @@
         private System.Windows.Forms.ToolStripMenuItem addOriginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stateImageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stateFullscreenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addThreadToolStripMenuItem;
     }
 }
 

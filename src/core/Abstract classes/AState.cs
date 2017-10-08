@@ -28,6 +28,7 @@ namespace core
         protected IAnswer mAnswer;
         protected bool mEndThread, mEndGame;
         protected int mOrigin;
+        protected int mParentThread;
 
         public abstract void Init();
         public abstract string getDescription();
@@ -40,6 +41,12 @@ namespace core
 			get { return mOrigin; }
 			set { mOrigin = value; }
 		}
+
+        public int MParentThread
+        {
+            get { return mParentThread; }
+            set { mParentThread = value; }
+        }
 
         public string getGeneralDescription()
         {

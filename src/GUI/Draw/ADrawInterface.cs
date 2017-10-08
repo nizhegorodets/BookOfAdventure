@@ -129,6 +129,41 @@ namespace GUI
             }
             canvas.Controls.Add(endGame);
             canvas.Controls.Add(endThread);
+
+            // create labelParentThread
+            Label labelParentThread = new Label();
+            labelParentThread.Name = "labelParentThread";
+            labelParentThread.Text = "Parent thread: ";
+            labelParentThread.Location = new Point(endGameLabel.Location.X, endGameLabel.Location.Y + endGameLabel.Height + 5);
+            labelParentThread.AutoSize = true;
+            canvas.Controls.Add(labelParentThread);
+
+            // create parentThreadCombobox
+            ComboBox parentThreadCombobox = new ComboBox();
+            parentThreadCombobox.Name = "parentThreadCombobox";
+            parentThreadCombobox.Location = new Point(labelParentThread.Location.X + labelParentThread.Width + 5, labelParentThread.Location.Y);
+            if (gc.Threads != null)
+            {
+                foreach (thread th in gc.Threads)
+                {
+                    parentThreadCombobox.Items.Add(th.MID.ToString() + " - " + th.MDescription);
+                }
+                //if (inputState.MParentThread != -1)
+                //{
+                    string currentValue = inputState.MParentThread.ToString() + " - " + gc.getThread(inputState.MParentThread).MDescription;
+                    parentThreadCombobox.SelectedIndex = parentThreadCombobox.FindString(currentValue);
+                //}
+            }
+            canvas.Controls.Add(parentThreadCombobox);
+
+            // create hidden labelParentThread
+            Label labelHiddenParentThread = new Label();
+            labelHiddenParentThread.Name = "labelHiddenParentThread";
+            labelHiddenParentThread.Text = inputState.MParentThread.ToString();
+            labelHiddenParentThread.Location = new Point(endGameLabel.Location.X, endGameLabel.Location.Y + endGameLabel.Height + 5);
+            labelHiddenParentThread.Visible = false;
+            canvas.Controls.Add(labelHiddenParentThread);
+
             // create saveButton
             Button saveButton = new Button();
             saveButton.Width = canvas.Width / 3 - 20;
@@ -167,8 +202,21 @@ namespace GUI
 
             combobox = (ComboBox)canvas.Controls.Find("originCombobox", false).FirstOrDefault();
             inputState.origin = Convert.ToInt32(combobox.Text.Split()[0]);
+
+            combobox = (ComboBox)canvas.Controls.Find("parentThreadCombobox", false).FirstOrDefault();
+            inputState.MParentThread = Convert.ToInt32(combobox.Text.Split()[0]);
             return inputState;
         }
+
+        public void addStateToThread(AState inState, int oldParentThread)
+        {
+            thread newThread = gc.getThread(inState.MParentThread);
+            thread oldThread = gc.getThread(oldParentThread);
+
+            oldThread.deleteState(inState.MID);
+            newThread.addState(inState);
+        }
+    
 
         public static void deleteState(uint mIDState, gameContext gc)
         {

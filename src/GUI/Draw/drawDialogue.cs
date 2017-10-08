@@ -44,8 +44,11 @@ namespace GUI
             newDialogue.MCurrentPhrase = 0;
             // delete old version of state
 
-            gc.Threads[0].deleteState(newDialogue.MID);
-            gc.Threads[0].addState(newDialogue);
+            Label hiddenOldThread = (Label)canvas.Controls.Find("labelHiddenParentThread", false).FirstOrDefault();
+            int IDOldThread = Convert.ToInt32(hiddenOldThread.Text);
+
+            addStateToThread(newDialogue, IDOldThread);
+
             Form1.form1.loadToStateList();
         }
         public override void drawInterface(AState inputState)

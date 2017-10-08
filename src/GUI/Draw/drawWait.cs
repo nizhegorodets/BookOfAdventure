@@ -36,8 +36,11 @@ namespace GUI
             newWait.MDelay = (uint)upDown.Value;
             // delete old version of state
 
-            gc.Threads[0].deleteState(newWait.MID);
-            gc.Threads[0].addState(newWait);
+            Label hiddenOldThread = (Label)canvas.Controls.Find("labelHiddenParentThread", false).FirstOrDefault();
+            int IDOldThread = Convert.ToInt32(hiddenOldThread.Text);
+
+            addStateToThread(newWait, IDOldThread);
+
             Form1.form1.loadToStateList();
         }
 

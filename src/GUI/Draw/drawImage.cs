@@ -36,8 +36,11 @@ namespace GUI
 
             // delete old version of state
 
-            gc.Threads[0].deleteState(newImage.MID);
-            gc.Threads[0].addState(newImage);
+            Label hiddenOldThread = (Label)canvas.Controls.Find("labelHiddenParentThread", false).FirstOrDefault();
+            int IDOldThread = Convert.ToInt32(hiddenOldThread.Text);
+
+            addStateToThread(newImage, IDOldThread);
+
             Form1.form1.loadToStateList();
         }
 

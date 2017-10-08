@@ -46,8 +46,11 @@ namespace GUI
             newChoice.MChoices = choices;
             // delete old version of state
 
-            gc.Threads[0].deleteState(newChoice.MID);
-            gc.Threads[0].addState(newChoice);
+            Label hiddenOldThread = (Label)canvas.Controls.Find("labelHiddenParentThread", false).FirstOrDefault();
+            int IDOldThread = Convert.ToInt32(hiddenOldThread.Text);
+
+            addStateToThread(newChoice, IDOldThread);
+
             Form1.form1.loadToStateList();
         }
 

@@ -27,6 +27,7 @@ namespace core
         private SortedDictionary<string, string> enteredWords;
         private SortedDictionary<string, uint> enteredChoices;
         private SortedDictionary<uint?, IState> mIDToIState;
+        private string mDescription;
 
         // methods
         public void deleteState(uint? delIndex)
@@ -101,6 +102,12 @@ namespace core
             set { mID = value; }
         }
         
+        public string MDescription
+        {
+            get { return mDescription; }
+            set { mDescription = value; }
+        }
+
         public uint? MCurrentState
         {
             get { return mCurrentState; }

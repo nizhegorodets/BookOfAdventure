@@ -177,6 +177,19 @@ namespace core
             return null;
         }
 
+        public thread getThread(int index)
+        {
+            foreach (thread th in Threads)
+            {
+                if (th.MID == index)
+                {
+                    return th;
+                }
+            }
+            return null;
+        }
+
+
         public void Load(string file)
         {
             gameContext obj = JsonConvert.DeserializeObject<gameContext>(File.ReadAllText(file), new JsonSerializerSettings

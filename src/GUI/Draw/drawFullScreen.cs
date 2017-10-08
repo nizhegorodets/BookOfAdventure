@@ -35,14 +35,17 @@ namespace GUI.Draw
             TextBox titleBox = (TextBox)canvas.Controls.Find("titleBox", false).FirstOrDefault();
             newFS.MPath = titleBox.Text;
 
+
             ComboBox zoomCombobox = (ComboBox)canvas.Controls.Find("animationZoom", false).FirstOrDefault();
             newFS.MAnimationZoom = Convert.ToBoolean(zoomCombobox.SelectedItem);
 
             ComboBox slideCombobox = (ComboBox)canvas.Controls.Find("animationSlide", false).FirstOrDefault();
             newFS.MAnimationSlide = Convert.ToBoolean(slideCombobox.SelectedItem);
 
-            gc.Threads[0].deleteState(newFS.MID);
-            gc.Threads[0].addState(newFS);
+            Label hiddenOldThread = (Label)canvas.Controls.Find("labelHiddenParentThread", false).FirstOrDefault();
+            int IDOldThread = Convert.ToInt32(hiddenOldThread.Text);
+
+            addStateToThread(newFS, IDOldThread);
             Form1.form1.loadToStateList();
         }
         public override void drawInterface(AState inputState)
