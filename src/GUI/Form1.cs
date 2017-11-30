@@ -309,6 +309,21 @@ namespace GUI
 
             gameContext.Threads.Add(thread);
         }
+
+        private void exportToGraphToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            gameContext.exportToGraph();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            autoSaving.Enabled = true;
+        }
+
+        private void autoSaving_Tick(object sender, EventArgs e)
+        {
+            gameContext.Save("temp.json");
+        }
     }
 
 }

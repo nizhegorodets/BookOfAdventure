@@ -110,6 +110,8 @@ namespace GUI
 
             newChoice.MTitle = "New state choice";
             newChoice.MChoosedChoice = 0;
+            // default origin
+            newChoice.origin = 1;
 
             gc.Threads[0].addState(newChoice);
             Form1.form1.loadToStateList();

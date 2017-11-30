@@ -1,0 +1,59 @@
+﻿{
+  "CurrLocation": null,
+  "PlayerName": null,
+  "Locations": null,
+  "nPCs": [
+    {
+      "MName": "sadfsaf",
+      "MId": 1
+    }
+  ],
+  "Threads": [
+    {
+      "MID": 0,
+      "MDescription": "sdfasfd",
+      "MCurrentState": null,
+      "EnteredWords": {},
+      "EnteredChoices": {},
+      "MIDToIState": {
+        "0": {
+          "$type": "core.stateDialogue, Assembly-CSharp",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "New state dialogue"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 0,
+          "MDescription": "",
+          "MNextStates": [],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "1": {
+          "$type": "core.stateDialogue, Assembly-CSharp",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "New state dialogue"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 1,
+          "MDescription": "",
+          "MNextStates": [],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        }
+      }
+    }
+  ],
+  "ActiveThreads": []
+}

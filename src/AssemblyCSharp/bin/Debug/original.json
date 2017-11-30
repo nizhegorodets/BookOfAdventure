@@ -1,0 +1,726 @@
+﻿{
+  "CurrLocation": null,
+  "PlayerName": null,
+  "Locations": null,
+  "nPCs": [
+    {
+      "MName": "Bot",
+      "MId": 1
+    },
+    {
+      "MName": "Kiska",
+      "MId": 2
+    },
+    {
+      "MName": "Freddy",
+      "MId": 3
+    },
+    {
+      "MName": "Alisa",
+      "MId": 4
+    }
+  ],
+  "Threads": [
+    {
+      "MID": 0,
+      "MDescription": "main thread",
+      "MCurrentState": 0,
+      "EnteredWords": {},
+      "EnteredChoices": {},
+      "MIDToIState": {
+        "0": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Здравствуй. Меня зовут Айден, я - твой ассистент. Теперь я буду жить в твоем смартфоне :P"
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Приложение QMessenger - это не просто удобный обмен сообщениями с друзьями, но и новый взгляд на потребление контента."
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 0,
+          "MDescription": "",
+          "MNextStates": [
+            1
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "1": {
+          "$type": "core.stateChoice, core",
+          "MChoosedChoice": 0,
+          "MChoices": [
+            {
+              "MID": 0,
+              "MText": "Что такое ассистент?"
+            },
+            {
+              "MID": 1,
+              "MText": "Мне не очень приятно, что в моем телефоне будет кто-то жить..."
+            }
+          ],
+          "MTitle": "Чтобы понять о чём идет речь, задай мне несколько вопросов!",
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 1,
+          "MDescription": "",
+          "MNextStates": [
+            2,
+            20
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "2": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Ассистент - это твой помощник во всем! Хочешь узнать погоду? Запланировать встречу? Или, может быть, просто поболтать, когда станет скучно?"
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Искусственный интеллект наконец-то встал на службу человеку. И в отличии от других аналогов, я понимаю контекст и умею вести нестандартные разговоры. "
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Оу... Кажется, Фред написал тебе сообщение. Вернись в диалоги и ответь ему, продолжим разговор позже."
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 2,
+          "MDescription": "",
+          "MNextStates": [
+            4
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "4": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Еееееееееее бой!!! только гляньте кто в сети. купил таки новый телефон и поставил нормальный мессенжер. мое увожение)"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 3,
+          "MParentThread": 0,
+          "MID": 4,
+          "MDescription": "",
+          "MNextStates": [
+            10
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "10": {
+          "$type": "core.stateImage, core",
+          "MPath": "images\\harold%254%313%.jpg",
+          "origin": 3,
+          "MParentThread": 0,
+          "MID": 10,
+          "MDescription": "",
+          "MNextStates": [
+            11
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "11": {
+          "$type": "core.stateChoice, core",
+          "MChoosedChoice": 0,
+          "MChoices": [
+            {
+              "MID": 0,
+              "MText": "Айден"
+            },
+            {
+              "MID": 1,
+              "MText": "Не скажу)"
+            },
+            {
+              "MID": 2,
+              "MText": "Когда вернешь долг?"
+            }
+          ],
+          "MTitle": "как зовут твоего бота?",
+          "origin": 3,
+          "MParentThread": 0,
+          "MID": 11,
+          "MDescription": "",
+          "MNextStates": [
+            12,
+            14,
+            15
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "12": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "каждый ассистент сам выбирает себе имя.. моего зовут Corydon. прикольное имя ^^ "
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 3,
+          "MParentThread": 0,
+          "MID": 12,
+          "MDescription": "",
+          "MNextStates": [
+            13
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "13": {
+          "$type": "core.stateChoice, core",
+          "MChoosedChoice": 0,
+          "MChoices": [
+            {
+              "MID": 0,
+              "MText": "Ох, Господи, почему мы до сих пор дружим("
+            },
+            {
+              "MID": 1,
+              "MText": "Да-да. Смешно."
+            },
+            {
+              "MID": 2,
+              "MText": "Действительно, забавно)"
+            }
+          ],
+          "MTitle": "иногда я называю его Коридор. так еще смешнее, хахаа сечешь? ",
+          "origin": 3,
+          "MParentThread": 0,
+          "MID": 13,
+          "MDescription": "",
+          "MNextStates": [
+            16,
+            16,
+            16
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "14": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "ну и вредина же ты. а я тогда не расскажу тебе о новой СУПЕР-КРУТОЙ забегаловке которая открылась неподалеку!"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 3,
+          "MParentThread": 0,
+          "MID": 14,
+          "MDescription": "",
+          "MNextStates": [
+            12
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "15": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "эм... давай я попозже напишу. тут у меня завал на работе"
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "моего кстати зовут Corydon"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 3,
+          "MParentThread": 0,
+          "MID": 15,
+          "MDescription": "",
+          "MNextStates": [
+            16
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "16": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "И долго мне ждать от тебя сообщение?"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 4,
+          "MParentThread": 0,
+          "MID": 16,
+          "MDescription": "",
+          "MNextStates": [
+            17
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "17": {
+          "$type": "core.stateImage, core",
+          "MPath": "images\\sickSmile%128%128%.png",
+          "origin": 4,
+          "MParentThread": 0,
+          "MID": 17,
+          "MDescription": "",
+          "MNextStates": [
+            18
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "18": {
+          "$type": "core.stateChoice, core",
+          "MChoosedChoice": 0,
+          "MChoices": [
+            {
+              "MID": 0,
+              "MText": "Что? Ты кто такая вообще?"
+            },
+            {
+              "MID": 1,
+              "MText": "Извини, мне тут пишут вдесятером("
+            },
+            {
+              "MID": 2,
+              "MText": "Полегче. Что за тон?"
+            }
+          ],
+          "MTitle": "??",
+          "origin": 4,
+          "MParentThread": 0,
+          "MID": 18,
+          "MDescription": "",
+          "MNextStates": [
+            19
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "19": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Пффф... Шутки шутишь?"
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Мы с тобой познакомились в парке. Я перепутала тебя с другим человеком и... И напрыгнула на тебя сзади. Глупо вышло. Но я же извинилась уже!"
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "К тому же, мы потом мило прогулялись и поболтали. "
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "И вот теперь ты не пииииииишешь("
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 4,
+          "MParentThread": 0,
+          "MID": 19,
+          "MDescription": "",
+          "MNextStates": [
+            25
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "20": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Хм.. Формально, я не нахожусь в твоем телефоне. Все мои данные хранятся на сервере Корпорации, а с тобой я общаюсь через интерфейс"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 20,
+          "MDescription": "",
+          "MNextStates": [
+            21
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "21": {
+          "$type": "core.stateChoice, core",
+          "MChoosedChoice": 0,
+          "MChoices": [
+            {
+              "MID": 0,
+              "MText": "Что такое ассистент?"
+            },
+            {
+              "MID": 1,
+              "MText": "В любом случае мне неприятно, что в моих сообщениях копается псевдоинтеллектуальное искусственное создание."
+            }
+          ],
+          "MTitle": "Поэтому можешь считать это утверждение метафорическим. ",
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 21,
+          "MDescription": "",
+          "MNextStates": [
+            2,
+            22
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "22": {
+          "$type": "core.stateChoice, core",
+          "MChoosedChoice": 0,
+          "MChoices": [
+            {
+              "MID": 0,
+              "MText": "Я всегда так разговариваю."
+            },
+            {
+              "MID": 1,
+              "MText": "Извини, мне не хотелось показаться грубым"
+            }
+          ],
+          "MTitle": "Грубость - это твое второе имя?",
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 22,
+          "MDescription": "",
+          "MNextStates": [
+            23,
+            24
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "23": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Скорее всего так и есть. Что ж... позволь мне провести синхронизацию с твоим сетевым портретом, чтобы я был готов к твоим резким ответам."
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Думаю, это займет не больше трех минут. Я напишу!"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 23,
+          "MDescription": "",
+          "MNextStates": [],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "24": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Брось, я же всего лишь робот. Меня невозможно обидеть)"
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Но и грубить не нужно. Ты же воспитанный человек."
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Подожди три минуты! Мне нужно провести полную синхронизацию с твоим сетевым образом, чтобы полностью подстроиться под твой характер. Я скоро вернусь!"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 24,
+          "MDescription": "",
+          "MNextStates": [],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "25": {
+          "$type": "core.stateWait, core",
+          "MDelay": 180,
+          "MTitle": "Я тут!\r\nМне удалось собрать на тебя внушительное досье :P",
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 25,
+          "MDescription": "",
+          "MNextStates": [
+            26
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "26": {
+          "$type": "core.stateChoice, core",
+          "MChoosedChoice": 0,
+          "MChoices": [
+            {
+              "MID": 0,
+              "MText": "Какое досье? О чем ты вообще говоришь?"
+            }
+          ],
+          "MTitle": "Теперь мне известны основные черты твоего характера.",
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 26,
+          "MDescription": "",
+          "MNextStates": [
+            27
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "27": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Возможно, это покажется тебе неприятным... Каждый современный человек оставляет огромное количество данных о себе, пользуясь интернетом."
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Запросы в поисковых системах, профили в социальных сетях, сообщения на форумах. Но не беспокойся! Собранные данные защищены и используются только, чтобы помогать тебе."
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 27,
+          "MDescription": "",
+          "MNextStates": [
+            28
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "28": {
+          "$type": "core.stateChoice, core",
+          "MChoosedChoice": 0,
+          "MChoices": [
+            {
+              "MID": 0,
+              "MText": "Я глажу кота. У меня заняты руки. Отстань."
+            },
+            {
+              "MID": 1,
+              "MText": "Ага, он разговаривает, как человек! С ума сойти!"
+            }
+          ],
+          "MTitle": "чего затих кум?) с ботом что ли разговариваешь?",
+          "origin": 3,
+          "MParentThread": 0,
+          "MID": 28,
+          "MDescription": "",
+          "MNextStates": [
+            29,
+            30
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "29": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "у тебя же нет кота Оо"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 3,
+          "MParentThread": 0,
+          "MID": 29,
+          "MDescription": "",
+          "MNextStates": [
+            31
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "30": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "а я же говорил! говорил же что ассстмьет - это крутая штука!"
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "ассистент*"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 3,
+          "MParentThread": 0,
+          "MID": 30,
+          "MDescription": "",
+          "MNextStates": [
+            31
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "31": {
+          "$type": "core.stateChoice, core",
+          "MChoosedChoice": 0,
+          "MChoices": [
+            {
+              "MID": 0,
+              "MText": "Зачем ты это говоришь? В чем смысл говорить пользователям, что за ними следят?"
+            }
+          ],
+          "MTitle": "Честно-честно",
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 31,
+          "MDescription": "",
+          "MNextStates": [
+            32
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "32": {
+          "$type": "core.stateDialogue, core",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Да-да-да. Информация о слежке оттолкнет любоого пользователя от продукта Корпорации."
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Во-первых, ты отлично знаешь о слежке. Об этом знают все люди, только не хотят себе в этом признаваться."
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Магазины, социальные сети, мессенжеры - везде ведется сбор статистики."
+            },
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "Во-вторых, ты не оттолкнешь наш продукт, я знаю, как нужно с тобой беседовать"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 32,
+          "MDescription": "",
+          "MNextStates": [
+            33
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "33": {
+          "$type": "core.stateImage, core",
+          "MPath": "images\\skeptikBeen%192%192%.png",
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 33,
+          "MDescription": "",
+          "MNextStates": [
+            34
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "34": {
+          "$type": "core.stateChoice, core",
+          "MChoosedChoice": 0,
+          "MChoices": [
+            {
+              "MID": 0,
+              "MText": "Со мной нужно беседовать дурацкими картинками?"
+            },
+            {
+              "MID": 1,
+              "MText": "Ты прав. Со мной нужно беседовать откровенно и прямолинейно."
+            }
+          ],
+          "MTitle": "",
+          "origin": 1,
+          "MParentThread": 0,
+          "MID": 34,
+          "MDescription": "",
+          "MNextStates": [],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        }
+      }
+    },
+    {
+      "MID": 1,
+      "MDescription": "Alisa",
+      "MCurrentState": null,
+      "EnteredWords": {},
+      "EnteredChoices": {},
+      "MIDToIState": {}
+    },
+    {
+      "MID": 2,
+      "MDescription": "",
+      "MCurrentState": null,
+      "EnteredWords": {},
+      "EnteredChoices": {},
+      "MIDToIState": {}
+    }
+  ],
+  "ActiveThreads": [
+    0
+  ]
+}

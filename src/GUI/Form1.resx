@@ -120,29 +120,6 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="textBox2.Text" xml:space="preserve">
-    <value>&gt;&gt; В соседней комнате кто-то тихо, но методично стучал молотком.
-&gt;&gt; Возможно, это плотник Сергей решил поработать в полной тьме и соорудить табурет.
-&gt;&gt; Но запах полуразложившегося тела немного пугает вас.
-&gt;&gt; Что вы решите сделать?
-@@ 1. Перекреститься и постучать в дверь, добавив "Вы пиццу заказывали?"
-@@ 2. Сказать: "Серега, я вернулся, в магазине гвоздей нет!"
-@@ 3. Спрятаться и ждать, пока из-за двери не покажется человек.</value>
-  </data>
-  <data name="textBox3.Text" xml:space="preserve">
-    <value>&gt;&gt; gameContext was created
-&gt;&gt; Added new thread
-&gt;&gt; Added new location
-&gt;&gt; Added new dialogue
-&gt;&gt; Added new NPC
-&gt;&gt; Added new NPC
-&gt;&gt; ---------------- Starting simulation ---------------------
-&gt;&gt; origin id = 0, name = "Автор" say "В соседней комнате кто-то тихо, но методично стучал молотком."
-&gt;&gt; origin id = 0, name = "Автор" say "Возможно, это плотник Сергей решил поработать в полной тьме и соорудить табурет."
-&gt;&gt; origin id = 0, name = "Автор" say "Но запах полуразложившегося тела немного пугает вас."
-&gt;&gt; choice id = 1 started
-&gt;&gt; wait anwer of player...</value>
-  </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>
@@ -151,5 +128,8 @@
   </metadata>
   <metadata name="menuStripStates.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>434, 17</value>
+  </metadata>
+  <metadata name="autoSaving.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>575, 17</value>
   </metadata>
 </root>

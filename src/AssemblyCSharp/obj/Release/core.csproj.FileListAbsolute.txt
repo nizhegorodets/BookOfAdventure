@@ -1,0 +1,8 @@
+D:\work\august\BookOfAdventure\src\core\bin\Release\core.exe.config
+D:\work\august\BookOfAdventure\src\core\bin\Release\core.exe
+D:\work\august\BookOfAdventure\src\core\bin\Release\core.pdb
+D:\work\august\BookOfAdventure\src\core\bin\Release\Newtonsoft.Json.dll
+D:\work\august\BookOfAdventure\src\core\bin\Release\Newtonsoft.Json.xml
+D:\work\august\BookOfAdventure\src\core\obj\Release\core.csprojResolveAssemblyReference.cache
+D:\work\august\BookOfAdventure\src\core\obj\Release\core.exe
+D:\work\august\BookOfAdventure\src\core\obj\Release\core.pdb

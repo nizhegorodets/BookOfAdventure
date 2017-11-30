@@ -86,6 +86,8 @@ namespace GUI
 
             newDialogue.MPhrases = new Phrase[1] { new Phrase(0, "New state dialogue") };
             newDialogue.MCurrentPhrase = 0;
+            // default origin
+            newDialogue.origin = 1;
             gc.Threads[0].addState(newDialogue);
             Form1.form1.loadToStateList();
         }
