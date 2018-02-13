@@ -67,6 +67,7 @@ namespace GUI
             phrasesList.LabelEdit = true;
             phrasesList.MouseUp += new MouseEventHandler(phrases_MouseUp);
             phrasesList.Columns.Add("Phrases", phrasesList.Width, HorizontalAlignment.Left);
+            
             canvas.Controls.Add(phrasesList);
             foreach (Phrase ph in tempStateDialogue.MPhrases)
             {

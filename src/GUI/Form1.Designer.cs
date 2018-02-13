@@ -34,6 +34,7 @@
             this.открытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToGraphToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createAllWaysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addOriginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addThreadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +53,12 @@
             this.stateImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stateFullscreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoSaving = new System.Windows.Forms.Timer(this.components);
+            this.addStateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dialogueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.choiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.waitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fullscreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStripStates.SuspendLayout();
@@ -64,6 +71,7 @@
             this.файлToolStripMenuItem,
             this.addOriginToolStripMenuItem,
             this.addThreadToolStripMenuItem,
+            this.addStateToolStripMenuItem,
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -77,6 +85,7 @@
             this.открытьToolStripMenuItem,
             this.сохранитьToolStripMenuItem,
             this.exportToGraphToolStripMenuItem,
+            this.createAllWaysToolStripMenuItem,
             this.выйтиToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -102,6 +111,13 @@
             this.exportToGraphToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.exportToGraphToolStripMenuItem.Text = "Export to graph";
             this.exportToGraphToolStripMenuItem.Click += new System.EventHandler(this.exportToGraphToolStripMenuItem_Click);
+            // 
+            // createAllWaysToolStripMenuItem
+            // 
+            this.createAllWaysToolStripMenuItem.Name = "createAllWaysToolStripMenuItem";
+            this.createAllWaysToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.createAllWaysToolStripMenuItem.Text = "Create all ways";
+            this.createAllWaysToolStripMenuItem.Click += new System.EventHandler(this.createAllWaysToolStripMenuItem_Click);
             // 
             // выйтиToolStripMenuItem
             // 
@@ -238,6 +254,53 @@
             this.autoSaving.Interval = 3000;
             this.autoSaving.Tick += new System.EventHandler(this.autoSaving_Tick);
             // 
+            // addStateToolStripMenuItem
+            // 
+            this.addStateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dialogueToolStripMenuItem,
+            this.choiceToolStripMenuItem,
+            this.waitToolStripMenuItem,
+            this.imageToolStripMenuItem,
+            this.fullscreenToolStripMenuItem});
+            this.addStateToolStripMenuItem.Name = "addStateToolStripMenuItem";
+            this.addStateToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.addStateToolStripMenuItem.Text = "Add state...";
+            // 
+            // dialogueToolStripMenuItem
+            // 
+            this.dialogueToolStripMenuItem.Name = "dialogueToolStripMenuItem";
+            this.dialogueToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dialogueToolStripMenuItem.Text = "Dialogue";
+            this.dialogueToolStripMenuItem.Click += new System.EventHandler(this.dialogueToolStripMenuItem_Click);
+            // 
+            // choiceToolStripMenuItem
+            // 
+            this.choiceToolStripMenuItem.Name = "choiceToolStripMenuItem";
+            this.choiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.choiceToolStripMenuItem.Text = "Choice";
+            this.choiceToolStripMenuItem.Click += new System.EventHandler(this.choiceToolStripMenuItem_Click);
+            // 
+            // waitToolStripMenuItem
+            // 
+            this.waitToolStripMenuItem.Name = "waitToolStripMenuItem";
+            this.waitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.waitToolStripMenuItem.Text = "Wait";
+            this.waitToolStripMenuItem.Click += new System.EventHandler(this.waitToolStripMenuItem_Click);
+            // 
+            // imageToolStripMenuItem
+            // 
+            this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
+            this.imageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.imageToolStripMenuItem.Text = "Image";
+            this.imageToolStripMenuItem.Click += new System.EventHandler(this.imageToolStripMenuItem_Click);
+            // 
+            // fullscreenToolStripMenuItem
+            // 
+            this.fullscreenToolStripMenuItem.Name = "fullscreenToolStripMenuItem";
+            this.fullscreenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fullscreenToolStripMenuItem.Text = "Fullscreen";
+            this.fullscreenToolStripMenuItem.Click += new System.EventHandler(this.fullscreenToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +348,13 @@
         private System.Windows.Forms.ToolStripMenuItem addThreadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportToGraphToolStripMenuItem;
         private System.Windows.Forms.Timer autoSaving;
+        private System.Windows.Forms.ToolStripMenuItem createAllWaysToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addStateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dialogueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem choiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem waitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem imageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fullscreenToolStripMenuItem;
     }
 }
 

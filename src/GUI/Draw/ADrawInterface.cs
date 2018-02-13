@@ -166,6 +166,7 @@ namespace GUI
 
             // create saveButton
             Button saveButton = new Button();
+            saveButton.Name = "saveButton";
             saveButton.Width = canvas.Width / 3 - 20;
             saveButton.Location = new Point(0 + 20, 20);
             saveButton.Text = "Save State";

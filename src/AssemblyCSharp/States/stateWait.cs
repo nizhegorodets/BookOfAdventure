@@ -24,6 +24,11 @@ namespace core
     {
         private uint mDelay;
         private string mTitle;
+
+        public override string buildText(int choice)
+        {
+            return mTitle + ": " + mDelay.ToString() + '\n';
+        }
         public void setTitle(string title)
         {
             mTitle = title;

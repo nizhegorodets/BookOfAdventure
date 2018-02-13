@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using core;
 using core.Other_classes;
 using GUI.Draw;
+using System.IO;
+
 
 namespace GUI
 {
@@ -20,11 +22,15 @@ namespace GUI
         gameContext gameContext = new gameContext();
         SortedDictionary<int, uint> indexTreeOfStateToIDOfState = new SortedDictionary<int, uint>();
         IDrawInterface drawObj;
+        bool flagSavedState;
+        int ways;
         public static Form1 form1 = null;
         public Form1()
         {
             InitializeComponent();
             form1 = this;
+            flagSavedState = true;
+            ways = 0;
         }
 
         private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -33,6 +39,11 @@ namespace GUI
             {
                 gameContext.Load(openFileDialog1.FileName);
                 loadToStateList();
+                //var selectedIndex = form1.TreeOfStates.Items.Count - 1;
+                //form1.TreeOfStates.SelectedIndex = selectedIndex;
+                //form1.TreeOfStates.UpdateLayout();
+
+                //form1.TreeOfStates.ScrollIntoView(form1.TreeOfStates.SelectedItem);
                 addOriginToolStripMenuItem.Enabled = true;
             }
             
@@ -102,44 +113,59 @@ namespace GUI
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // this method not effective. need rewrite this code
-            AState selectedState;
-            char type = TreeOfStates.SelectedItem.ToString()[1];
-            PropertiesOfElements.Controls.Clear();
-            // find selected state
-            uint index = indexTreeOfStateToIDOfState[TreeOfStates.SelectedIndex];
-            foreach (thread th in gameContext.Threads)
+            int selectedIndex = TreeOfStates.SelectedIndex;
+            if (!flagSavedState)
             {
-                foreach (KeyValuePair<uint?, IState> st in th.MIDToIState)
+                Button saveButton = (Button)PropertiesOfElements.Controls.Find("saveButton", false).FirstOrDefault();
+                if (saveButton != null)
                 {
-                    if (index == st.Value.getID())
+                    saveButton.PerformClick();
+                }
+                flagSavedState = true;
+                TreeOfStates.SelectedIndex = selectedIndex;
+            }
+            else
+            {
+                // this method not effective. need rewrite this code
+                AState selectedState;
+                char type = TreeOfStates.SelectedItem.ToString()[1];
+                PropertiesOfElements.Controls.Clear();
+                // find selected state
+                uint index = indexTreeOfStateToIDOfState[TreeOfStates.SelectedIndex];
+                foreach (thread th in gameContext.Threads)
+                {
+                    foreach (KeyValuePair<uint?, IState> st in th.MIDToIState)
                     {
-                        selectedState = (AState)st.Value;
-                        // draw interface
-                        switch (type)
+                        if (index == st.Value.getID())
                         {
-                            case 'D':
-                                drawObj = new drawDialogue(gameContext, PropertiesOfElements);
-                                break;
-                            case 'W':
-                                drawObj = new drawWait(gameContext, PropertiesOfElements);
-                                break;
-                            case 'E':
-                                break;
-                            case 'C':
-                                drawObj = new drawChoice(gameContext, PropertiesOfElements);
-                                break;
-                            case 'I':
-                                drawObj = new drawImage(gameContext, PropertiesOfElements);
-                                break;
-                            case 'F':
-                                drawObj = new drawFullScreen(gameContext, PropertiesOfElements);
-                                break;
+                            selectedState = (AState)st.Value;
+                            // draw interface
+                            switch (type)
+                            {
+                                case 'D':
+                                    drawObj = new drawDialogue(gameContext, PropertiesOfElements);
+                                    break;
+                                case 'W':
+                                    drawObj = new drawWait(gameContext, PropertiesOfElements);
+                                    break;
+                                case 'E':
+                                    break;
+                                case 'C':
+                                    drawObj = new drawChoice(gameContext, PropertiesOfElements);
+                                    break;
+                                case 'I':
+                                    drawObj = new drawImage(gameContext, PropertiesOfElements);
+                                    break;
+                                case 'F':
+                                    drawObj = new drawFullScreen(gameContext, PropertiesOfElements);
+                                    break;
+                            }
+                            drawObj.drawInterface(selectedState);
+                            break;
                         }
-                        drawObj.drawInterface(selectedState);
-                        break;
                     }
                 }
+                flagSavedState = false;
             }
         }
 
@@ -323,6 +349,64 @@ namespace GUI
         private void autoSaving_Tick(object sender, EventArgs e)
         {
             gameContext.Save("temp.json");
+        }
+
+        private void findWays(thread th, AState state, string way)
+        {
+            if (state.MNextStates.Length != 0)
+            {
+                for(int i = 0; i < state.MNextStates.Length; i++)
+                {
+                    AState nextState = (AState)th.MIDToIState[state.MNextStates[i]];
+                    string newString = way;
+                    newString += state.buildText(i);
+                    findWays(th, nextState, newString);
+                }
+            }
+            else
+            {
+                if(!File.Exists("way0.txt"))
+                {
+                    File.Create("way0.txt");
+                }
+
+                StreamWriter sw = new StreamWriter("way0.txt", true, System.Text.Encoding.Default);
+                sw.Write(way);
+                sw.Close();
+                ways++;
+            }
+        }
+
+        private void createAllWaysToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string way = "---------------------------\n";
+            findWays(gameContext.Threads[0], (AState)gameContext.Threads[0].MIDToIState[0], way);
+            MessageBox.Show("Found " + ways.ToString() + " ways!");
+        }
+
+        private void dialogueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            stateDialogueCreate_Click(sender, e);
+        }
+
+        private void choiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            stateChoiceCreate_Click(sender, e);
+        }
+
+        private void waitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            stateWaitCreate_Click(sender, e);
+        }
+
+        private void imageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            stateImageToolStripMenuItem_Click(sender,e);
+        }
+
+        private void fullscreenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            stateFullscreenToolStripMenuItem_Click(sender,e);
         }
     }
 

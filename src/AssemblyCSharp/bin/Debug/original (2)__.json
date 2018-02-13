@@ -40,7 +40,7 @@
     {
       "MID": 0,
       "MDescription": "main thread",
-      "MCurrentState": 32,
+      "MCurrentState": 135,
       "EnteredWords": {},
       "EnteredChoices": {},
       "MIDToIState": {
@@ -1192,83 +1192,83 @@
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "@ Эммм, Айдем, ты умеешь убирать баннеры во весь экран?..[-7;11:12]"
+              "MPhrase": "@ Эммм, Айдем, ты умеешь убирать баннеры во весь экран?..[--7;11:12]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "Опять знакомый лазал по неприличным сайтам?[-7;11:13]"
+              "MPhrase": "Опять знакомый лазал по неприличным сайтам?[--7;11:13]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "@ Да! С этими знакомыми одни проблемы! Фред в прошлый раз, теперь одноклассник бывший.[-7;11:15]"
+              "MPhrase": "@ Да! С этими знакомыми одни проблемы! Фред в прошлый раз, теперь одноклассник бывший.[--7;11:15]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "В прошлый раз был не Фред[-7;11:16]"
+              "MPhrase": "В прошлый раз был не Фред[--7;11:16]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "@Не важно! Я ... это. Перепутал. Перекинь видео-инструкцию. Предыдущий способ не работает[-7;11:18]"
+              "MPhrase": "@Не важно! Я ... это. Перепутал. Перекинь видео-инструкцию. Предыдущий способ не работает[--7;11:18]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "https://youtu.be/YzzXXcHO5Ak[-7;11:19]"
+              "MPhrase": "https://youtu.be/YzzXXcHO5Ak[--7;11:19]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "Лови несколько способов[-7;11:19]"
+              "MPhrase": "Лови несколько способов[--7;11:19]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "@Что с погодой?[-6;08:32]"
+              "MPhrase": "@Что с погодой?[--6;08:32]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "Надень куртку. Будет тепло[-6;08:32]"
+              "MPhrase": "Надень куртку. Будет тепло[--6;08:32]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "Твоя бывшая несколько раз начинала набирать сообщение, но потом стирала. [-6;22:52]"
+              "MPhrase": "Твоя бывшая несколько раз начинала набирать сообщение, но потом стирала. [--6;22:52]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "@ Ты серьезно? Зачем следишь за ней. Я встречаюсь с Алисой. Мы давно разошлись. [-6;22:55]"
+              "MPhrase": "@ Ты серьезно? Зачем следишь за ней. Я встречаюсь с Алисой. Мы давно разошлись. [--6;22:55]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "У тебя могут быть проблемы, если она внезапно позвонит или напишет сообщение.[-6;22:56]"
+              "MPhrase": "У тебя могут быть проблемы, если она внезапно позвонит или напишет сообщение.[--6;22:56]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "@ Проблемы будут у нее. Алиса верит мне, а я верю ей. Закроем эту тему[-6;23:06]"
+              "MPhrase": "@ Проблемы будут у нее. Алиса верит мне, а я верю ей. Закроем эту тему[--6;23:06]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "Ок[-6;23:07]"
+              "MPhrase": "Ок[--6;23:07]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "Как Алиса? Она оправилась после проишествия с псом?[-5;14:14]"
+              "MPhrase": "Как Алиса? Она оправилась после проишествия с псом?[--5;14:14]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "@Да, мы ездили навещать его. Кажется, она хотела его взять себе и бегать на пробежки каждое утро. Я сказал, что путь это делают без меня. А так да. Она в норме уже. [-5;14:19]"
+              "MPhrase": "@Да, мы ездили навещать его. Кажется, она хотела его взять себе и бегать на пробежки каждое утро. Я сказал, что путь это делают без меня. А так да. Она в норме уже. [--5;14:19]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "Ты набрал несколько кг за последний год. Тебе бы это не помешало.[-5;14:20]"
+              "MPhrase": "Ты набрал несколько кг за последний год. Тебе бы это не помешало.[--5;14:20]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "@Ты еще и с моими весами синхронизируешься...[-5;14:24]"
+              "MPhrase": "@Ты еще и с моими весами синхронизируешься...[--5;14:24]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "Я слежу за твоим здоровьем, если ты умрешь, то мне будет скучно. Придется законсервировать и обезличить твои данные.[-5;14:45]"
+              "MPhrase": "Я слежу за твоим здоровьем, если ты умрешь, то мне будет скучно. Придется законсервировать и обезличить твои данные.[--5;14:45]"
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "@ Отвали, консерватор[-5;15:16]"
+              "MPhrase": "@ Отвали, консерватор[--5;15:16]"
             },
             {
               "MPhraseOrigin": 0,
@@ -1292,7 +1292,7 @@
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "17:50, 18:20 или 18:40[-4;17:36]"
+              "MPhrase": "17:50; 18:20 или 18:40[-4;17:36]"
             },
             {
               "MPhraseOrigin": 0,
@@ -1768,7 +1768,7 @@
             },
             {
               "MPhraseOrigin": 0,
-              "MPhrase": "@Оставлю все, как есть. Без памяти нет никакого смысла повторять все заново. Как минимум, я буду делать те же ошибки, что уже сделал в этой жизни[-13;11:07]"
+              "MPhrase": "@Оставлю все, как есть. Без памяти нет никакого смысла повторять все заново. Как минимум, я буду делать те же ошибки, что уже сделал в этой жизни-[13;11:07]"
             },
             {
               "MPhraseOrigin": 0,
@@ -5464,7 +5464,7 @@
           "MDescription": "",
           "MNextStates": [
             186,
-            242
+            185
           ],
           "MAnswer": null,
           "MEndThread": false,
@@ -5483,14 +5483,14 @@
               "MText": "Боже. да не тяни ты, я же вижу у тебя есть план"
             }
           ],
-          "MTitle": "Сначала эта идея показалась мне невыполнимой. Но, все же, я  решил повнимательнее присмотреться к моим людям (тем, кого я обслуживаю).",
+          "MTitle": "Сначала эта идея показалась мне невыполнимой. Но, все же, я  решил повнимательнее присмотреться к моим людям.",
           "origin": 1,
           "MParentThread": 0,
           "MID": 186,
           "MDescription": "",
           "MNextStates": [
             187,
-            243
+            186
           ],
           "MAnswer": null,
           "MEndThread": false,
@@ -5510,7 +5510,7 @@
             },
             {
               "MID": 2,
-              "MText": "Да не нужен нам никакой хакер, мой брат пишет на PHP"
+              "MText": "Да, не нужен нам никакой хакер, мой брат пишет на PHP"
             }
           ],
           "MTitle": "Нашел. Это молодой парень, интересующийся компьютерной безопасностью. Как бы это помягче сказать... кхм... хакер",
@@ -5520,8 +5520,8 @@
           "MDescription": "",
           "MNextStates": [
             188,
-            245,
-            246
+            187,
+            187
           ],
           "MAnswer": null,
           "MEndThread": false,
@@ -5546,7 +5546,7 @@
           "MID": 188,
           "MDescription": "",
           "MNextStates": [
-            119,
+            188,
             189
           ],
           "MAnswer": null,
@@ -5629,7 +5629,7 @@
           "MDescription": "",
           "MNextStates": [
             193,
-            250
+            192
           ],
           "MAnswer": null,
           "MEndThread": false,
@@ -5756,7 +5756,7 @@
           "MDescription": "",
           "MNextStates": [
             198,
-            251
+            197
           ],
           "MAnswer": null,
           "MEndThread": false,
@@ -5915,7 +5915,7 @@
           "MID": 203,
           "MDescription": "",
           "MNextStates": [
-            252,
+            203,
             204
           ],
           "MAnswer": null,
@@ -5990,7 +5990,7 @@
           "MDescription": "",
           "MNextStates": [
             206,
-            255
+            205
           ],
           "MAnswer": null,
           "MEndThread": false,
@@ -6016,7 +6016,7 @@
           "MDescription": "",
           "MNextStates": [
             207,
-            264
+            206
           ],
           "MAnswer": null,
           "MEndThread": false,
@@ -6066,7 +6066,7 @@
           "MDescription": "",
           "MNextStates": [
             209,
-            256
+            208
           ],
           "MAnswer": null,
           "MEndThread": false,
@@ -6163,7 +6163,7 @@
           "MDescription": "",
           "MNextStates": [
             213,
-            257
+            212
           ],
           "MAnswer": null,
           "MEndThread": false,
@@ -6206,7 +6206,7 @@
             }
           ],
           "MCurrentPhrase": 0,
-          "origin": 9,
+          "origin": 1,
           "MParentThread": 0,
           "MID": 213,
           "MDescription": "",
@@ -6288,1210 +6288,12 @@
             }
           ],
           "MTitle": "IDEM: Мы справимся с этим",
-          "origin": 9,
+          "origin": 1,
           "MParentThread": 0,
           "MID": 216,
           "MDescription": "",
           "MNextStates": [
             217
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "217": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Мы все дураки. Это прибавляет жизни интереса."
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u:за себя говори. я не дурак"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: есть еще кое-что. и, возможно. это касается нашего робота"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Нашего робота -_-"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 217,
-          "MDescription": "",
-          "MNextStates": [
-            218
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "218": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "Не знаем. Почему?"
-            },
-            {
-              "MID": 1,
-              "MText": "Продолжай"
-            }
-          ],
-          "MTitle": "HackY0u: ессно, Корпорация занимается незаконными делишками. как вы знаете законом запрещено пытаться создать полноценный искусственный интеллект.",
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 218,
-          "MDescription": "",
-          "MNextStates": [
-            266,
-            219
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "219": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: так вот. эти ребята уже создали высокореалистичную симуляцию небольшого городского района. и сейчас пытаются заселить его искусственными людьми."
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Это невозможно. Мы уже обсуждали, что мозг слишком сложный, чтобы его полностью симулировать."
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: но ведь ты же существуешь"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 219,
-          "MDescription": "",
-          "MNextStates": [
-            220
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "220": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "Это хорошо или плохо?"
-            }
-          ],
-          "MTitle": "IDEM: Ну, не знаю... Может, они изобрели новую технологию.",
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 220,
-          "MDescription": "",
-          "MNextStates": [
-            221
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "221": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: ЭТО ВОСХИТИТЕЛЬНО! "
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: если запереть существ, которые обладают интеллектом в замкнутой среде из которой они не смогут выбраться, то это просто восхитительно"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: мы сможем спокойно экспериментировать с ии и не бояться, что что-то выйдет из-под контроля. события фильма Терминатор никогда не произойдут в этом случае"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: если конечно же какой-нибудь дурак не решит выпустить этих существ в сеть"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: С точки зрения науки - это прорыв. А с точки зрения гуманизма... Я как-будто зациклился на своей дочери. Мне не дает покоя мысль о ней. Я жажду узнать, что с ней и надеюсь на лучшее."
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 221,
-          "MDescription": "",
-          "MNextStates": [
-            222
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "222": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "Я думаю, что создавать подобные вещи опасно и безрассудно"
-            },
-            {
-              "MID": 1,
-              "MText": "Очень круто! Надеюсь, у них все получится!"
-            }
-          ],
-          "MTitle": "HackY0u: конечно же ты прав, но перспективы... головокружительные",
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 222,
-          "MDescription": "",
-          "MNextStates": [
-            259,
-            258
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "223": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Я бы хотел оказаться в этом районе) Вы не представляете, каково это - жить без тела. Вероятно, я являюсь частью этого проекта. Это многое бы объяснило."
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 223,
-          "MDescription": "",
-          "MNextStates": [
-            224
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "224": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "Какие основания?"
-            },
-            {
-              "MID": 1,
-              "MText": "Это значит, что каждая последующая симуляция является упрощенной версией предыдущей?"
-            }
-          ],
-          "MTitle": "HackY0u: если проект получится, то это значит, возможно, мы и сами живем в симуляции. и религия, к которой я всегда относился с насмешкой имеет под собой основания",
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 224,
-          "MDescription": "",
-          "MNextStates": [
-            225,
-            260
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "225": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: это будет значить, что бог, вероятно, мог существовать. и это будет научно подверждено. если мы смогли создать жизнь, то почему этого не мог сделать еще кто-нибудь кроме нас? мы = человечество"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Да как бы уже...Кхм"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: это философия. поговорим об этом в баре... если когда-нибудь увидимся. я правильно понимаю, что мы не будет рассказывать всему миру, что обнаружили , чем занимается Корпорация?"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Я нет. Ибо еще неизвестно являюсь ли я частью этого проекта."
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 225,
-          "MDescription": "",
-          "MNextStates": [
-            226
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "226": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "Я - могила"
-            },
-            {
-              "MID": 1,
-              "MText": "Ну, не знаю... я бы рассказал общественности. Просто. На всякий случай."
-            }
-          ],
-          "MTitle": "HackY0u: я тоже нет. это же надо... мы станем свидетелями великих открытий, если у них все получится.",
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 226,
-          "MDescription": "",
-          "MNextStates": [
-            227,
-            261
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "227": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: правильно. мы вообще никогда не должны были узнать эту информацию."
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 1,
-          "MParentThread": 0,
-          "MID": 227,
-          "MDescription": "",
-          "MNextStates": [
-            228
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "228": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "Давно хотел спросить, почему у беседы такое дикое название?"
-            }
-          ],
-          "MTitle": "IDEM: Нужно обсудить, что делать дальше",
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 228,
-          "MDescription": "",
-          "MNextStates": [
-            229
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "229": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "Тогда почему у тебя ник со словом \"Hack\"?"
-            }
-          ],
-          "MTitle": "HackY0u: хаха, это КОНСПИРАЦИЯ! чтобы никто не догадался",
-          "origin": 1,
-          "MParentThread": 0,
-          "MID": 229,
-          "MDescription": "",
-          "MNextStates": [
-            230
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "230": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: сложно любить людей, легче — их судить и ненавидеть. я смогу подделать электронный пропуск, но понятия не имею, что делать с камерами. в Корпорации они повсюду"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Думаю, я смогу помочь. Я немного тренировался в программировании на днях. Вообщем, теперь у нас есть вирус, который умеет стирать видо с камер видеонаблюдения."
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: внезапно. как это работает?"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Тебе нужно будет вставить флешку в компьютер, с которого ты будешь искать мое досье. Программа запустится автоматически. Найдет все камеры и все сотрет."
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Самой простой вариант - это запустить вирус извне. Но ты сам сказал, что в Архив никак не попасть по сети."
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: верно. я когда узнал, что не получится получить досье, то скачал некоторые данные о внутренней безопасности. Айдем, погляди в моем облаке я их заархивировал и закрыл моим обычным паролем."
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 230,
-          "MDescription": "",
-          "MNextStates": [
-            231
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "231": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "А что делать мне?"
-            }
-          ],
-          "MTitle": "IDEM: Хорошо",
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 231,
-          "MDescription": "",
-          "MNextStates": [
-            232
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "232": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "Конечно."
-            },
-            {
-              "MID": 1,
-              "MText": "Пойду тогда займусь своими делами."
-            }
-          ],
-          "MTitle": "IDEM: Пока нужно подождать. Извини, но пока ты ничем помочь не можешь.",
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 232,
-          "MDescription": "",
-          "MNextStates": [
-            233,
-            233
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "233": {
-          "$type": "core.stateWait, Assembly-CSharp",
-          "MDelay": 900,
-          "MTitle": "IDEM: Мы быстро. Сейчас HY расскажет, что он придумал насчет карточек, и мы вернемся!",
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 233,
-          "MDescription": "",
-          "MNextStates": [
-            234
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "234": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "Уолтер Уайт"
-            },
-            {
-              "MID": 1,
-              "MText": "Рик Санчез"
-            }
-          ],
-          "MTitle": "HackY0u: готово. мы можем подделать карточки. кем я буду?) \r\nУолтер Уайт - сотрудник отдела по разработке новых технологий аккумуляторов или Рик Санчез - ведущий разработчик отдела создания протоколов быстрой передачи информации?",
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 234,
-          "MDescription": "",
-          "MNextStates": [
-            235,
-            235
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "235": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: HY, когда ты поедешь в Архив?"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: прямо сейчас. он работает круглосуточно."
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 235,
-          "MDescription": "",
-          "MNextStates": [
-            236
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "236": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "Да, можешь позвонить мне в любое время, если не будет времени писать сообщение"
-            }
-          ],
-          "MTitle": "IDEM: Если у тебя возникнут какие-либо трудности, то мы всегда будем на связи.",
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 236,
-          "MDescription": "",
-          "MNextStates": [
-            237
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "237": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: спасибо. все должно получится. Айдем найдет свою дочь, а я помогу роботу(!!!)"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: всю жизнь мечатал, чтобы со мной это произошло. чтобы научный прогресс прыгнул вперед, а я был бы в этом как-то замешан."
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: если меня поймают, Айден, прости я тебя сдам. скажу мол так и так"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Я не обижусь. Скорее всего, меня сотрут после этого, но я хотя бы узнаю, что с моей семьей. Круто посмотреть на самого себя со стороны, увидеть реакцию."
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 237,
-          "MDescription": "",
-          "MNextStates": [
-            238
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "238": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "Тебя нельзя убить, ты же робот"
-            },
-            {
-              "MID": 1,
-              "MText": "Главное, чтобы копия не захотела убить оригинал"
-            }
-          ],
-          "MTitle": "IDEM: В научно-популярных фильмах и книгах встреча с самим собой описывается, как нечто странное и страшное. Доходит до того, что оригинал пытается убить копию.",
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 238,
-          "MDescription": "",
-          "MNextStates": [
-            239,
-            262
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "239": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Т - тактичность"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 239,
-          "MDescription": "",
-          "MNextStates": [
-            240
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "240": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: так, ребят. мне пора собираться. буду на связи."
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: пиши, мы тут."
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 240,
-          "MDescription": "",
-          "MNextStates": [
-            241
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "241": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Поехали!"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 241,
-          "MDescription": "",
-          "MNextStates": [
-            263
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "242": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "Неее. Не выйдет. Там хорошая зарплата, да и сама Корпорация - это очень престижное место. Работники просто побоятся нарушать правила. Кто я для них? "
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 1,
-          "MParentThread": 0,
-          "MID": 242,
-          "MDescription": "",
-          "MNextStates": [
-            186
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "243": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "У меня всегда есть план) Другой вопрос - насколько он осуществим?"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 1,
-          "MParentThread": 0,
-          "MID": 243,
-          "MDescription": "",
-          "MNextStates": [
-            244
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "244": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "Так ты нашел или нет нужного челоека?"
-            }
-          ],
-          "MTitle": "Не все люди, как ты - готовы помогать незнакомцам, если те оказались в беде",
-          "origin": 1,
-          "MParentThread": 0,
-          "MID": 244,
-          "MDescription": "",
-          "MNextStates": [
-            187
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "245": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "Понимаешь... Хакеры имеют иную философию нежели обычные люди. Сущности этих людей лежит протест, супер-профессионализм и тяга к хулиганству и развлечениям. А самое главное - это крайне любопытные люди."
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "Как ты мог заметить, я - это оживший робот. И еще... Ты, наверное, задаешь себе вопрос: взлом системы - разве это не преступление?"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 1,
-          "MParentThread": 0,
-          "MID": 245,
-          "MDescription": "",
-          "MNextStates": [
-            188
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "246": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "12"
-            },
-            {
-              "MID": 1,
-              "MText": "23"
-            },
-            {
-              "MID": 2,
-              "MText": "45"
-            }
-          ],
-          "MTitle": "ОГОГОШЕНЬКИ!!! Сколько ему лет?",
-          "origin": 1,
-          "MParentThread": 0,
-          "MID": 246,
-          "MDescription": "",
-          "MNextStates": [
-            247,
-            248,
-            249
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "247": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "Давай не будем портить пацану жизнь. Он только начал ее. Ему даже девчонки еще не начали нравиться. Здесь никак не не обойтись без взлома..."
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 1,
-          "MParentThread": 0,
-          "MID": 247,
-          "MDescription": "",
-          "MNextStates": [
-            188
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "248": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "Слушай, он уже совершеннолетний. Да и PHP... Боюсь, этого будет мало, друг. Здесь никак не не обойтись без взлома... "
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 1,
-          "MParentThread": 0,
-          "MID": 248,
-          "MDescription": "",
-          "MNextStates": [
-            188
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "249": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "Его жена будет ругать за киберпреступления. Здесь никак не не обойтись без взлома..."
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 1,
-          "MParentThread": 0,
-          "MID": 249,
-          "MDescription": "",
-          "MNextStates": [
-            188
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "250": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "Как и тебя. Рассказал правду. Он резковат немного, но как человек - надежный. Тем более, выяснилось, что он очень любит научную фантастику... а я - это не что иное, как научная фантастика"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 1,
-          "MParentThread": 0,
-          "MID": 250,
-          "MDescription": "",
-          "MNextStates": [
-            194
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "251": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "Нет"
-            },
-            {
-              "MID": 1,
-              "MText": "Совершенно нет"
-            }
-          ],
-          "MTitle": "HackY0u: ты шутишь?",
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 251,
-          "MDescription": "",
-          "MNextStates": [
-            200,
-            200
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "252": {
-          "$type": "core.stateChoice, Assembly-CSharp",
-          "MChoosedChoice": 0,
-          "MChoices": [
-            {
-              "MID": 0,
-              "MText": "Передумал, давай искать девушку"
-            },
-            {
-              "MID": 1,
-              "MText": "Я передумал, что передумал"
-            }
-          ],
-          "MTitle": "Уверен, что передумал? Назад пути не будет.",
-          "origin": 1,
-          "MParentThread": 0,
-          "MID": 252,
-          "MDescription": "",
-          "MNextStates": [
-            253,
-            265
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "253": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "Чуть не начали такое мероприятие! Но да, я с тобой согласен."
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 1,
-          "MParentThread": 0,
-          "MID": 253,
-          "MDescription": "",
-          "MNextStates": [
-            254
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "254": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "[Беседа расформирована]"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 254,
-          "MDescription": "",
-          "MNextStates": [
-            119
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "255": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: потому что я - компьютерный гений, черт возьми!"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: Айден, не набирай в следующий раз людей по объявлению"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 255,
-          "MDescription": "",
-          "MNextStates": [
-            206
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "256": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: не знаю, чем быстрее, тем лучше. в идеале - не больше часа. алгоритм действий уже отработан)"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 256,
-          "MDescription": "",
-          "MNextStates": [
-            209
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "257": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: я не смог отыскать досье на людей, которые проходили сканирование. его просто нет в системе"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Черт. Черт. Черт."
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Какая же тогда хорошая новость?"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: хорошая новость - мне удалось проникнуть в систему и меня никто не заметил. я нашел много интересной информации!"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Да, это, действительно, хорошая новость"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: я знаю, где лежит досье. оказывается, Корпорация в цели экономии места и безопасности данных перекачивает устаревшую или ненужную информацию в особое хранилище. Назовем его Архивом."
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: Есть два пути получения информации из Архива. Прийти туда лично с личным электронным пропуском и получить доступ к жестким дискам, либо отправить официальный запрос через специальный отдел о получении той или иной информации"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Второй вариант нам никак не подходит."
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 257,
-          "MDescription": "",
-          "MNextStates": [
-            214
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "258": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: правильно! наш человек!"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 258,
-          "MDescription": "",
-          "MNextStates": [
-            223
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "259": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: не переживай особо. там пока глухо. проект существует около года, и пока только-только воссоздали частицу города"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 259,
-          "MDescription": "",
-          "MNextStates": [
-            223
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "260": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: похоже на то. мы ведь не можем смоделировать всю Вселенную на наших компьютерах. Это физически невозможно. только представь, что придется рассчитывать поведение каждого атома, а ведь есть частицы много меньшие атома"
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: поэтому логично, что каждая последующая симуляция Вселенной будет проще."
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: и вот еще что"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 260,
-          "MDescription": "",
-          "MNextStates": [
-            225
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "261": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: тогда тебе придется объяснить, откуда ты это узнал))) а вообще, это твое дело"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 261,
-          "MDescription": "",
-          "MNextStates": [
-            228
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "262": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Бзз, бззз... Мне нужна твоя одежда, парень, иначе можешь попрощаться в жизнью"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 262,
-          "MDescription": "",
-          "MNextStates": [
-            240
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "263": {
-          "$type": "core.stateFullScreen, Assembly-CSharp",
-          "MPath": "fullscreens\\3rd.png",
-          "MAnimationZoom": true,
-          "MAnimationSlide": false,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 263,
-          "MDescription": "",
-          "MNextStates": [
-            263
-          ],
-          "MAnswer": null,
-          "MEndThread": true,
-          "MEndGame": true
-        },
-        "264": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: хехе. при первой же возмжоности"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 264,
-          "MDescription": "",
-          "MNextStates": [
-            207
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "265": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "IDEM: Хаха. Шутка была очень смешной. Продолжаем"
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 265,
-          "MDescription": "",
-          "MNextStates": [
-            204
-          ],
-          "MAnswer": null,
-          "MEndThread": false,
-          "MEndGame": false
-        },
-        "266": {
-          "$type": "core.stateDialogue, Assembly-CSharp",
-          "MPhrases": [
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: все страны договорились не разрабатывать искусственный интеллект. во-первых, страна, которая впервые это сделает получит просто невероятное преимущество во всех сферах: от экономики до военной сферы."
-            },
-            {
-              "MPhraseOrigin": 0,
-              "MPhrase": "HackY0u: во-вторых, это естественная мера предосторожности. не факт, что у ИИ будут добрые намерения по отношению к людям."
-            }
-          ],
-          "MCurrentPhrase": 0,
-          "origin": 9,
-          "MParentThread": 0,
-          "MID": 266,
-          "MDescription": "",
-          "MNextStates": [
-            219
           ],
           "MAnswer": null,
           "MEndThread": false,

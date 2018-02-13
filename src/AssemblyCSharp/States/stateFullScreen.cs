@@ -12,6 +12,12 @@ namespace core
         private bool mAnimationZoom;
         private bool mAnimationSlide;
         public stateFullScreen() { mOrigin = -1; }
+
+        public override string buildText(int choice)
+        {
+            return mPath + '\n';
+        }
+
         public stateFullScreen(uint mID, string mDescription, uint?[] mNextStates, string path, bool zoom, bool slide)
         {
             this.mID = mID;

@@ -26,6 +26,14 @@ namespace core
         private Choice[] mChoices;
         private string mTitle;
 
+
+        public override string buildText(int choice)
+        {
+            string text = "";
+            text = mTitle + '\n';
+            text += (mChoices[choice].MText + '\n');
+            return text;
+        }
         public void setTitle(string input)
         {
             mTitle = input;

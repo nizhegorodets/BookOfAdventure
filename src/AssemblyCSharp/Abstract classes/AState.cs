@@ -33,6 +33,7 @@ namespace core
         public abstract void Init();
         public abstract string getDescription();
         public abstract IAnswer startExecution();
+        public abstract string buildText(int choice);
         public uint getID() { return mID; }
         public uint?[] getNextStates() { return mNextStates; }
 

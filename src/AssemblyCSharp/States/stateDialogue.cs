@@ -25,6 +25,16 @@ namespace core
         private Phrase[] mPhrases;
         private uint mCurrentPhrase;
 
+
+        public override string buildText(int choice)
+        {
+            string text = "";
+            for(int i = 0; i < mPhrases.Length; i++)
+            {
+                text += (mPhrases[i].MPhrase + '\n');
+            }
+            return text;
+        }
         public stateDialogue() { }
         public stateDialogue(uint id, string description, uint?[] nextStates, Phrase[] phrases, bool endTh, bool endGame)
         {

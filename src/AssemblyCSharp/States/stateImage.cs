@@ -24,6 +24,11 @@ namespace core
     {
         private string mPath;
         public stateImage() { mOrigin = -1; }
+
+        public override string buildText(int choice)
+        {
+            return mPath + '\n';
+        }
         stateImage(uint mID, string mDescription, uint?[] mNextStates, string path)
         {
             this.mID = mID;
