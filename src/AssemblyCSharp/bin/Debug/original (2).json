@@ -34,13 +34,20 @@
     {
       "MName": "Hacker_Bot",
       "MId": 9
+    },
+    {
+      "MName": "second_thread",
+      "MId": 8
     }
   ],
   "Threads": [
     {
+      "StartState": [
+        0
+      ],
       "MID": 0,
       "MDescription": "main thread",
-      "MCurrentState": 32,
+      "MCurrentState": 0,
       "EnteredWords": {},
       "EnteredChoices": {},
       "MIDToIState": {
@@ -136,7 +143,7 @@
         },
         "10": {
           "$type": "core.stateImage, Assembly-CSharp",
-          "MPath": "images\\harold%254%313%[s].png",
+          "MPath": "images\\harold[s].png",
           "origin": 3,
           "MParentThread": 0,
           "MID": 10,
@@ -304,7 +311,7 @@
         },
         "17": {
           "$type": "core.stateImage, Assembly-CSharp",
-          "MPath": "images\\sickSmile%128%128%.png",
+          "MPath": "images\\sickSmile[s].png",
           "origin": 4,
           "MParentThread": 0,
           "MID": 17,
@@ -688,7 +695,7 @@
         },
         "33": {
           "$type": "core.stateImage, Assembly-CSharp",
-          "MPath": "images\\skeptikBeen%192%192%.png",
+          "MPath": "images\\skeptikBeen.png",
           "origin": 1,
           "MParentThread": 0,
           "MID": 33,
@@ -3684,7 +3691,7 @@
         },
         "109": {
           "$type": "core.stateImage, Assembly-CSharp",
-          "MPath": "images\\harold%254%313%.png",
+          "MPath": "images\\harold.png",
           "origin": 1,
           "MParentThread": 0,
           "MID": 109,
@@ -3794,7 +3801,7 @@
         },
         "114": {
           "$type": "core.stateImage, Assembly-CSharp",
-          "MPath": "images\\harold%254%313%.png",
+          "MPath": "images\\harold.png",
           "origin": 4,
           "MParentThread": 0,
           "MID": 114,
@@ -7495,6 +7502,213 @@
           ],
           "MAnswer": null,
           "MEndThread": false,
+          "MEndGame": false
+        }
+      }
+    },
+    {
+      "StartState": [
+        0
+      ],
+      "MID": 1,
+      "MDescription": "testTh",
+      "MCurrentState": 267,
+      "EnteredWords": {},
+      "EnteredChoices": {},
+      "MIDToIState": {
+        "267": {
+          "$type": "core.stateDialogue, Assembly-CSharp",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "testTh #1"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 8,
+          "MParentThread": 1,
+          "MID": 267,
+          "MDescription": "",
+          "MNextStates": [
+            268
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "268": {
+          "$type": "core.stateWait, Assembly-CSharp",
+          "MDelay": 60,
+          "MTitle": "testTh #2",
+          "origin": 8,
+          "MParentThread": 1,
+          "MID": 268,
+          "MDescription": "",
+          "MNextStates": [
+            269
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "269": {
+          "$type": "core.stateDialogue, Assembly-CSharp",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "testTh #3"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 8,
+          "MParentThread": 1,
+          "MID": 269,
+          "MDescription": "",
+          "MNextStates": [
+            270
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "270": {
+          "$type": "core.stateWait, Assembly-CSharp",
+          "MDelay": 60,
+          "MTitle": "testTh #4",
+          "origin": 8,
+          "MParentThread": 1,
+          "MID": 270,
+          "MDescription": "",
+          "MNextStates": [
+            271
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "271": {
+          "$type": "core.stateDialogue, Assembly-CSharp",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "testTh #5"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 8,
+          "MParentThread": 1,
+          "MID": 271,
+          "MDescription": "",
+          "MNextStates": [
+            272
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "272": {
+          "$type": "core.stateWait, Assembly-CSharp",
+          "MDelay": 60,
+          "MTitle": "testTh #6",
+          "origin": 8,
+          "MParentThread": 1,
+          "MID": 272,
+          "MDescription": "",
+          "MNextStates": [
+            273
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "273": {
+          "$type": "core.stateDialogue, Assembly-CSharp",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "testTh #7"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 8,
+          "MParentThread": 1,
+          "MID": 273,
+          "MDescription": "",
+          "MNextStates": [
+            274
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "274": {
+          "$type": "core.stateWait, Assembly-CSharp",
+          "MDelay": 0,
+          "MTitle": "testTh #8",
+          "origin": 8,
+          "MParentThread": 1,
+          "MID": 274,
+          "MDescription": "",
+          "MNextStates": [
+            275
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "275": {
+          "$type": "core.stateDialogue, Assembly-CSharp",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "testTh #9"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 8,
+          "MParentThread": 1,
+          "MID": 275,
+          "MDescription": "",
+          "MNextStates": [
+            276
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "276": {
+          "$type": "core.stateWait, Assembly-CSharp",
+          "MDelay": 60,
+          "MTitle": "testTh #10",
+          "origin": 8,
+          "MParentThread": 1,
+          "MID": 276,
+          "MDescription": "",
+          "MNextStates": [
+            277
+          ],
+          "MAnswer": null,
+          "MEndThread": false,
+          "MEndGame": false
+        },
+        "277": {
+          "$type": "core.stateDialogue, Assembly-CSharp",
+          "MPhrases": [
+            {
+              "MPhraseOrigin": 0,
+              "MPhrase": "testTh #11"
+            }
+          ],
+          "MCurrentPhrase": 0,
+          "origin": 8,
+          "MParentThread": 1,
+          "MID": 277,
+          "MDescription": "",
+          "MNextStates": [
+            277
+          ],
+          "MAnswer": null,
+          "MEndThread": true,
           "MEndGame": false
         }
       }

@@ -28,8 +28,16 @@ namespace core
         private SortedDictionary<string, uint> enteredChoices;
         private SortedDictionary<uint?, IState> mIDToIState;
         private string mDescription;
+        private List<int> startState;
 
         // methods
+
+        public List<int> StartState
+        {
+            get { return startState; }
+            set { startState = value; }
+        }
+
         public void deleteState(uint? delIndex)
         {
             mIDToIState.Remove(delIndex);
@@ -82,6 +90,8 @@ namespace core
         public thread()
         {
             mID = 0;
+            startState = new List<int>();
+            startState.Add(0);
             mIDToIState = new SortedDictionary<uint?, IState>();
             enteredWords = new SortedDictionary<string, string>();
             enteredChoices = new SortedDictionary<string, uint>();
