@@ -24,6 +24,8 @@ namespace GUI
         IDrawInterface drawObj;
         bool flagSavedState;
         int ways;
+
+        public string lang = "Russian";
         public static Form1 form1 = null;
         public Form1()
         {
@@ -37,13 +39,11 @@ namespace GUI
         {
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                gameContext.Load(openFileDialog1.FileName);
+                gameContext.Load("gc_" + lang + ".json");
+                thread currThread = new thread();
+                currThread.Load(openFileDialog1.FileName);
+                gameContext.addThreads(currThread);
                 loadToStateList();
-                //var selectedIndex = form1.TreeOfStates.Items.Count - 1;
-                //form1.TreeOfStates.SelectedIndex = selectedIndex;
-                //form1.TreeOfStates.UpdateLayout();
-
-                //form1.TreeOfStates.ScrollIntoView(form1.TreeOfStates.SelectedItem);
                 addOriginToolStripMenuItem.Enabled = true;
             }
             
@@ -51,8 +51,8 @@ namespace GUI
 
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
-                return;
+            //if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
+            //    return;
             gameContext.Save(saveFileDialog1.FileName);
         }
 
@@ -199,7 +199,7 @@ namespace GUI
             if (gameContext.Threads != null)
             {
                 drawObj = new drawWait(gameContext, PropertiesOfElements);
-                drawObj.createState();
+                drawObj.createState((int)gameContext.Threads[0].MID);
                 this.TreeOfStates.SelectedIndex = (int)countStates - 1;
             }
             else
@@ -208,7 +208,7 @@ namespace GUI
                 gameContext.init();
                 gameContext.Threads.Add(new thread());
                 drawObj = new drawWait(gameContext, PropertiesOfElements);
-                drawObj.createState();
+                drawObj.createState((int)gameContext.Threads[0].MID);
                 this.TreeOfStates.SelectedIndex = (int)countStates - 1;
             }
         }
@@ -219,7 +219,7 @@ namespace GUI
             if (gameContext.Threads != null)
             {
                 drawObj = new drawDialogue(gameContext, PropertiesOfElements);
-                drawObj.createState();
+                drawObj.createState((int)gameContext.Threads[0].MID);
                 this.TreeOfStates.SelectedIndex = (int)countStates - 1;
             }
             else
@@ -228,7 +228,7 @@ namespace GUI
                 gameContext.init();
                 gameContext.Threads.Add(new thread());
                 drawObj = new drawDialogue(gameContext, PropertiesOfElements);
-                drawObj.createState();
+                drawObj.createState((int)gameContext.Threads[0].MID);
                 this.TreeOfStates.SelectedIndex = (int)countStates - 1;
             }
         }
@@ -239,7 +239,7 @@ namespace GUI
             if (gameContext.Threads != null)
             {
                 drawObj = new drawChoice(gameContext, PropertiesOfElements);
-                drawObj.createState();
+                drawObj.createState((int)gameContext.Threads[0].MID);
                 this.TreeOfStates.SelectedIndex = (int)countStates - 1;
             }
             else
@@ -248,7 +248,7 @@ namespace GUI
                 gameContext.init();
                 gameContext.Threads.Add(new thread());
                 drawObj = new drawChoice(gameContext, PropertiesOfElements);
-                drawObj.createState();
+                drawObj.createState((int)gameContext.Threads[0].MID);
                 this.TreeOfStates.SelectedIndex = (int)countStates - 1;
             }
         }
@@ -278,7 +278,7 @@ namespace GUI
             if (gameContext.Threads != null)
             {
                 drawObj = new drawImage(gameContext, PropertiesOfElements);
-                drawObj.createState();
+                drawObj.createState((int)gameContext.Threads[0].MID);
                 this.TreeOfStates.SelectedIndex = (int)countStates - 1;
             }
             else
@@ -287,7 +287,7 @@ namespace GUI
                 gameContext.init();
                 gameContext.Threads.Add(new thread());
                 drawObj = new drawChoice(gameContext, PropertiesOfElements);
-                drawObj.createState();
+                drawObj.createState((int)gameContext.Threads[0].MID);
                 this.TreeOfStates.SelectedIndex = (int)countStates - 1;
             }
         }
@@ -298,7 +298,7 @@ namespace GUI
             if (gameContext.Threads != null)
             {
                 drawObj = new drawFullScreen(gameContext, PropertiesOfElements);
-                drawObj.createState();
+                drawObj.createState((int)gameContext.Threads[0].MID);
                 this.TreeOfStates.SelectedIndex = (int)countStates - 1;
             }
             else
@@ -307,7 +307,7 @@ namespace GUI
                 gameContext.init();
                 gameContext.Threads.Add(new thread());
                 drawObj = new drawFullScreen(gameContext, PropertiesOfElements);
-                drawObj.createState();
+                drawObj.createState((int)gameContext.Threads[0].MID);
                 this.TreeOfStates.SelectedIndex = (int)countStates - 1;
             }
 
@@ -343,7 +343,7 @@ namespace GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            autoSaving.Enabled = true;
+            autoSaving.Enabled = false;
         }
 
         private void autoSaving_Tick(object sender, EventArgs e)
@@ -407,6 +407,68 @@ namespace GUI
         private void fullscreenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             stateFullscreenToolStripMenuItem_Click(sender,e);
+        }
+
+        private void changeLangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void russianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var currentItem = sender as ToolStripMenuItem;
+            if (currentItem != null)
+            {
+                //Here we look at owner of currentItem
+                //And get all children of it, if the child is ToolStripMenuItem
+                //So we don't get for example a separator
+                //Then uncheck all
+
+                ((ToolStripMenuItem)currentItem.OwnerItem).DropDownItems
+                    .OfType<ToolStripMenuItem>().ToList()
+                    .ForEach(item =>
+                    {
+                        item.Checked = false;
+                    });
+
+                //Check the current items
+                currentItem.Checked = true;
+                gameContext.Lang = currentItem.Text;
+                lang = currentItem.Text;
+            }
+        }
+
+        private void russianToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var currentItem = sender as ToolStripMenuItem;
+            if (currentItem != null)
+            {
+                //Here we look at owner of currentItem
+                //And get all children of it, if the child is ToolStripMenuItem
+                //So we don't get for example a separator
+                //Then uncheck all
+
+                ((ToolStripMenuItem)currentItem.OwnerItem).DropDownItems
+                    .OfType<ToolStripMenuItem>().ToList()
+                    .ForEach(item =>
+                    {
+                        item.Checked = false;
+                    });
+
+                //Check the current items
+                currentItem.Checked = true;
+                gameContext.Lang = currentItem.Text;
+                lang = currentItem.Text; 
+            }
+        }
+
+        private void englishToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

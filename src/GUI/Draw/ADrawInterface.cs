@@ -29,7 +29,7 @@ namespace GUI
         protected gameContext gc;
         protected Control canvas;
         
-        abstract public void createState();
+        abstract public void createState(int parentTh);
         abstract public void drawInterface(AState inputState);
         abstract public void saveButtonClick(object sender, EventArgs e);
        

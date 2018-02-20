@@ -106,7 +106,7 @@ namespace GUI.Draw
             canvas.Controls.Add(slideLabel);
         }
 
-        public override void createState()
+        public override void createState(int parentTh)
         {
             stateFullScreen newFS = new stateFullScreen();
             newFS.MDescription = "";
@@ -116,7 +116,7 @@ namespace GUI.Draw
             newFS.MNextStates = new uint?[0];
             newFS.MAnimationSlide = false;
             newFS.MAnimationZoom = false;
-
+            newFS.MParentThread = parentTh;
             gc.Threads[0].addState(newFS);
             Form1.form1.loadToStateList();
         }

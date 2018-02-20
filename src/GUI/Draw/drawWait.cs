@@ -82,7 +82,7 @@ namespace GUI
             canvas.Controls.Add(titleBox);
         }
         
-        public override void createState()
+        public override void createState(int parentTh)
         {
             stateWait newWait = new stateWait();
             newWait.MDescription = "";
@@ -93,6 +93,7 @@ namespace GUI
 
             newWait.MDelay = 0;
             newWait.MTitle = "New state wait";
+            newWait.MParentThread = parentTh;
 
             gc.Threads[0].addState(newWait);
             Form1.form1.loadToStateList();

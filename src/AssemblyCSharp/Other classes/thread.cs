@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -96,6 +98,23 @@ namespace core
             enteredWords = new SortedDictionary<string, string>();
             enteredChoices = new SortedDictionary<string, uint>();
         }
+
+        public void Load(string file)
+        {
+            thread obj = JsonConvert.DeserializeObject<thread>(File.ReadAllText(file), new JsonSerializerSettings
+            {
+                TypeNameHandling = TypeNameHandling.Auto
+            });
+
+            mID = obj.MID;
+            mCurrentState = obj.MCurrentState;
+            enteredWords = obj.EnteredWords;
+            enteredChoices = obj.EnteredChoices;
+            mIDToIState = obj.MIDToIState;
+            mDescription = obj.MDescription;
+            startState = obj.StartState;
+    }
+
         public void setID(uint input)
         {
             mID = input;

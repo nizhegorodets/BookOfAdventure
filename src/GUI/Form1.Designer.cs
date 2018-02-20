@@ -38,6 +38,12 @@
             this.выйтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addOriginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addThreadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addStateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dialogueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.choiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.waitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fullscreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TreeOfStates = new System.Windows.Forms.ListBox();
@@ -53,12 +59,9 @@
             this.stateImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stateFullscreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoSaving = new System.Windows.Forms.Timer(this.components);
-            this.addStateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dialogueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.choiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.waitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fullscreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changeLangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.russianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStripStates.SuspendLayout();
@@ -69,6 +72,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
+            this.changeLangToolStripMenuItem,
             this.addOriginToolStripMenuItem,
             this.addThreadToolStripMenuItem,
             this.addStateToolStripMenuItem,
@@ -138,6 +142,53 @@
             this.addThreadToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.addThreadToolStripMenuItem.Text = "Add thread";
             this.addThreadToolStripMenuItem.Click += new System.EventHandler(this.addThreadToolStripMenuItem_Click);
+            // 
+            // addStateToolStripMenuItem
+            // 
+            this.addStateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dialogueToolStripMenuItem,
+            this.choiceToolStripMenuItem,
+            this.waitToolStripMenuItem,
+            this.imageToolStripMenuItem,
+            this.fullscreenToolStripMenuItem});
+            this.addStateToolStripMenuItem.Name = "addStateToolStripMenuItem";
+            this.addStateToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.addStateToolStripMenuItem.Text = "Add state...";
+            // 
+            // dialogueToolStripMenuItem
+            // 
+            this.dialogueToolStripMenuItem.Name = "dialogueToolStripMenuItem";
+            this.dialogueToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.dialogueToolStripMenuItem.Text = "Dialogue";
+            this.dialogueToolStripMenuItem.Click += new System.EventHandler(this.dialogueToolStripMenuItem_Click);
+            // 
+            // choiceToolStripMenuItem
+            // 
+            this.choiceToolStripMenuItem.Name = "choiceToolStripMenuItem";
+            this.choiceToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.choiceToolStripMenuItem.Text = "Choice";
+            this.choiceToolStripMenuItem.Click += new System.EventHandler(this.choiceToolStripMenuItem_Click);
+            // 
+            // waitToolStripMenuItem
+            // 
+            this.waitToolStripMenuItem.Name = "waitToolStripMenuItem";
+            this.waitToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.waitToolStripMenuItem.Text = "Wait";
+            this.waitToolStripMenuItem.Click += new System.EventHandler(this.waitToolStripMenuItem_Click);
+            // 
+            // imageToolStripMenuItem
+            // 
+            this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
+            this.imageToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.imageToolStripMenuItem.Text = "Image";
+            this.imageToolStripMenuItem.Click += new System.EventHandler(this.imageToolStripMenuItem_Click);
+            // 
+            // fullscreenToolStripMenuItem
+            // 
+            this.fullscreenToolStripMenuItem.Name = "fullscreenToolStripMenuItem";
+            this.fullscreenToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.fullscreenToolStripMenuItem.Text = "Fullscreen";
+            this.fullscreenToolStripMenuItem.Click += new System.EventHandler(this.fullscreenToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -254,52 +305,35 @@
             this.autoSaving.Interval = 3000;
             this.autoSaving.Tick += new System.EventHandler(this.autoSaving_Tick);
             // 
-            // addStateToolStripMenuItem
+            // changeLangToolStripMenuItem
             // 
-            this.addStateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dialogueToolStripMenuItem,
-            this.choiceToolStripMenuItem,
-            this.waitToolStripMenuItem,
-            this.imageToolStripMenuItem,
-            this.fullscreenToolStripMenuItem});
-            this.addStateToolStripMenuItem.Name = "addStateToolStripMenuItem";
-            this.addStateToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.addStateToolStripMenuItem.Text = "Add state...";
+            this.changeLangToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.russianToolStripMenuItem,
+            this.englishToolStripMenuItem});
+            this.changeLangToolStripMenuItem.Name = "changeLangToolStripMenuItem";
+            this.changeLangToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.changeLangToolStripMenuItem.Text = "Change lang";
+            this.changeLangToolStripMenuItem.Click += new System.EventHandler(this.changeLangToolStripMenuItem_Click);
             // 
-            // dialogueToolStripMenuItem
+            // russianToolStripMenuItem
             // 
-            this.dialogueToolStripMenuItem.Name = "dialogueToolStripMenuItem";
-            this.dialogueToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.dialogueToolStripMenuItem.Text = "Dialogue";
-            this.dialogueToolStripMenuItem.Click += new System.EventHandler(this.dialogueToolStripMenuItem_Click);
+            this.russianToolStripMenuItem.Checked = true;
+            this.russianToolStripMenuItem.CheckOnClick = true;
+            this.russianToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.russianToolStripMenuItem.Name = "russianToolStripMenuItem";
+            this.russianToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.russianToolStripMenuItem.Text = "Russian";
+            this.russianToolStripMenuItem.CheckedChanged += new System.EventHandler(this.russianToolStripMenuItem_CheckedChanged);
+            this.russianToolStripMenuItem.Click += new System.EventHandler(this.russianToolStripMenuItem_Click);
             // 
-            // choiceToolStripMenuItem
+            // englishToolStripMenuItem
             // 
-            this.choiceToolStripMenuItem.Name = "choiceToolStripMenuItem";
-            this.choiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.choiceToolStripMenuItem.Text = "Choice";
-            this.choiceToolStripMenuItem.Click += new System.EventHandler(this.choiceToolStripMenuItem_Click);
-            // 
-            // waitToolStripMenuItem
-            // 
-            this.waitToolStripMenuItem.Name = "waitToolStripMenuItem";
-            this.waitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.waitToolStripMenuItem.Text = "Wait";
-            this.waitToolStripMenuItem.Click += new System.EventHandler(this.waitToolStripMenuItem_Click);
-            // 
-            // imageToolStripMenuItem
-            // 
-            this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
-            this.imageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.imageToolStripMenuItem.Text = "Image";
-            this.imageToolStripMenuItem.Click += new System.EventHandler(this.imageToolStripMenuItem_Click);
-            // 
-            // fullscreenToolStripMenuItem
-            // 
-            this.fullscreenToolStripMenuItem.Name = "fullscreenToolStripMenuItem";
-            this.fullscreenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.fullscreenToolStripMenuItem.Text = "Fullscreen";
-            this.fullscreenToolStripMenuItem.Click += new System.EventHandler(this.fullscreenToolStripMenuItem_Click);
+            this.englishToolStripMenuItem.CheckOnClick = true;
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.englishToolStripMenuItem.Text = "English";
+            this.englishToolStripMenuItem.CheckedChanged += new System.EventHandler(this.englishToolStripMenuItem_CheckedChanged);
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -355,6 +389,9 @@
         private System.Windows.Forms.ToolStripMenuItem waitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fullscreenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changeLangToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem russianToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
     }
 }
 

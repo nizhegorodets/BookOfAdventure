@@ -24,7 +24,7 @@ namespace GUI
 {
     interface IDrawInterface
     {
-        void createState();
+        void createState(int parentTh);
         void drawInterface(AState inputState);
         void saveButtonClick(object sender, EventArgs e);
     }

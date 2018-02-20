@@ -97,7 +97,7 @@ namespace GUI
             canvas.Controls.Add(titleLabel);
         }
 
-        public override void createState()
+        public override void createState(int parentTh)
         {
             stateChoice newChoice = new stateChoice();
             newChoice.MDescription = "";
@@ -112,6 +112,7 @@ namespace GUI
             newChoice.MChoosedChoice = 0;
             // default origin
             newChoice.origin = 1;
+            newChoice.MParentThread = parentTh;
 
             gc.Threads[0].addState(newChoice);
             Form1.form1.loadToStateList();

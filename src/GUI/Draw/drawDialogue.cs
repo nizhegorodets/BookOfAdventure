@@ -76,7 +76,7 @@ namespace GUI
             }
         }
 
-        public override void createState()
+        public override void createState(int parentTh)
         {
             stateDialogue newDialogue = new stateDialogue();
             newDialogue.MDescription = "";
@@ -87,6 +87,7 @@ namespace GUI
 
             newDialogue.MPhrases = new Phrase[1] { new Phrase(0, "New state dialogue") };
             newDialogue.MCurrentPhrase = 0;
+            newDialogue.MParentThread = parentTh;
             // default origin
             newDialogue.origin = 1;
             gc.Threads[0].addState(newDialogue);

@@ -8,8 +8,8 @@ namespace core.Other_classes
 {
     public class NPC : INPC
     {
-        private string mName;
-        private int mId;
+        public string mName;
+        public int mId;
 
         public string MName
         {

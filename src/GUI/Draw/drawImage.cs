@@ -69,7 +69,7 @@ namespace GUI
             canvas.Controls.Add(titleLabel);
         }
 
-        public override void createState()
+        public override void createState(int parentTh)
         {
             stateImage newImage = new stateImage();
             newImage.MDescription = "";
@@ -78,6 +78,7 @@ namespace GUI
             newImage.MID = gc.getIDForNewState();
             newImage.MNextStates = new uint?[0];
             newImage.MPath = "New path";
+            newImage.MParentThread = parentTh;
 
             gc.Threads[0].addState(newImage);
             Form1.form1.loadToStateList();

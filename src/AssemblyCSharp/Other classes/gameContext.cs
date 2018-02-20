@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using core.Other_classes;
+using core;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,7 @@ namespace core
         private List<NPC> NPCs;
         private List<thread> threads;
         private List<uint?> activeThreads;
+        private string lang = "Russian";
 
 
         // methods
@@ -104,6 +106,8 @@ namespace core
         }
         public void addThreads(thread input)
         {
+            if (threads == null)
+                threads = new List<thread>();
             threads.Add(input);
         }
         public void addActiveThreads(thread input)
@@ -161,14 +165,46 @@ namespace core
             set { activeThreads = value; }
         }
 
+        public string Lang
+        {
+            get { return lang; }
+            set { lang = value; }
+        }
+
         public void Save(string file)
         {
-            string json = JsonConvert.SerializeObject(this, Formatting.Indented, new JsonSerializerSettings
+            string json = "";
+            // saving game context
+            //string json = JsonConvert.SerializeObject(this, Formatting.Indented, new JsonSerializerSettings
+            //{
+            //    TypeNameHandling = TypeNameHandling.Auto
+            //});
+            //File.WriteAllText(file, json, Encoding.UTF8);
+            // saving each thread
+            foreach(thread th in this.threads)
+            {
+                json = JsonConvert.SerializeObject(th, Formatting.Indented, new JsonSerializerSettings
+                {
+                    TypeNameHandling = TypeNameHandling.Auto
+                });
+                File.WriteAllText("threads\\" + "th" + th.MID.ToString() + "_" + lang + ".json", json, Encoding.UTF8);
+            }
+            //saving only context without threads
+            gameContext temp = new gameContext(this);
+            json = JsonConvert.SerializeObject(temp, Formatting.Indented, new JsonSerializerSettings
             {
                 TypeNameHandling = TypeNameHandling.Auto
             });
-            File.WriteAllText(file, json, Encoding.UTF8);
+            File.WriteAllText("gc_" + lang + ".json", json, Encoding.UTF8);
+
         }
+
+        public gameContext(gameContext input)
+        {
+            lang = input.lang;
+            NPCs = input.nPCs;
+        }
+        
 
         public NPC getNPC(int index)
         {
