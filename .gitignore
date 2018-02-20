@@ -3,5 +3,10 @@ src/core/obj/**/*.*
 src/core/obj/Debug/core.csproj.FileListAbsolute.txt
 src/core/.vs/**/*.*
 
+src/AssemblyCSharp/bin/**/*.*
+src/AssemblyCSharp/obj/**/*.*
+src/AssemblyCSharp/obj/Debug/core.csproj.FileListAbsolute.txt
+src/AssemblyCSharp/.vs/**/*.*
+
 src/GUI/bin/**/*.*
 src/GUI/obj/**/*.*
